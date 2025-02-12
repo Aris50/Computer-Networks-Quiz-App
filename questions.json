@@ -208,7 +208,7 @@
     {
         "question": "Consider one SWITCH and 10 PC's connected to it. Which of the following is false?",
         "answers": [
-            " ",
+            "when PC1 sends a message to PC5, the message will be received and processes only by PC5",
             "when PC1 sends a message to PC5, the message will be received by all the PC's, but only PC5 processes it; the answer is sent back and received only by PC1",
             "when PC1 sends a message to PC5, the message will be received by all the PC's, each of them sending back an answer",
             "when PC1 sends a message to PC5, the message will be received by all the PC's but only PC5 processes it; the answer will be also received by all the PC's but only PC1 will process it"

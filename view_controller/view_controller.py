@@ -1,6 +1,8 @@
 from controller.controller import Controller
 import random
+import time
 
+# TODO: handle user input errors
 class Bcolors:
     CORRECT = '\033[92m'
     INCORRECT = '\033[91m'
@@ -19,6 +21,18 @@ class View:
         for i in range(len(questions)):
             print(f"{i+1}: {questions[i]}")
 
+    @staticmethod
+    def ask_user_to_play_again():
+        answer = input("\nDo you want to play again? (y/n):\n>>")
+        if answer == "y":
+            print("Restarting the game...")
+            for i in range (3):
+                print("...")
+                time.sleep(1)
+            return True
+        print("Bye!")
+        return False
+
     # Prints the welcome message that the user sees on the console when they first open the app
     @staticmethod
     def print_welcome_message():
@@ -26,9 +40,9 @@ class View:
         rules = "Welcome to the Computer Networks Quiz!\n\n>> You will be asked a series of multiple choice question, and you must answer them correctly. \n>> Write in lowercase all the corresponding letters of the answers you think are correct\n>> "+Bcolors.BLUE+"You WILL get points for partially correct results!\n"+Bcolors.NORMAL
         print(rules)
 
-    def answer_question_view(self,current_question, i):
+    def answer_question_view(self,current_question, i, number):
         # Print the question
-        print("\n" + str(i+1) + ". " + current_question['question'])
+        print("\n" + str(i+1) + "/" + str(number) + ". " + current_question['question'])
 
         # Print the answers
         answers = current_question['answers']
@@ -85,15 +99,17 @@ class View:
 
                 # Let the user answer the question
                 current_question = questions[question_id]
-                self.answer_question_view(current_question, i)
+                self.answer_question_view(current_question, i, number)
 
                 # If we are not at the last question, we print the score, as usual.
                 # If we are, we print the average because the game is over, and we proceed to give the user his grade
                 if i != number-1:
                     print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
                 else:
+                    print("\n\n-----------------------------------")
                     print("Your final score is " + Bcolors.BLUE + str(
                         self.__controller.calculate_grade(number)) + "%"+ Bcolors.NORMAL)
+                    print("-----------------------------------\n\n")
                     print(Bcolors.CORRECT+"Thank you for playing!"+Bcolors.NORMAL)
 
                 # If we have get to an empty list and the for loop is still going:
@@ -101,6 +117,9 @@ class View:
                 # In this case, we restart and add all the id's again
                 if not valid_id_list:
                     valid_id_list = self.__controller.get_all_ids()
+
+            if not self.ask_user_to_play_again():
+                break
 
 
 

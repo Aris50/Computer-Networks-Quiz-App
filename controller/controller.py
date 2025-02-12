@@ -22,7 +22,7 @@ class Controller:
         return every_id
 
     def calculate_grade(self,  number_of_questions):
-        #We compute the average and we return it with exactly two decimals
+        #We compute the average, and we return it with exactly two decimals
         score = self.__repo.get_score()
         grade = score / number_of_questions * 100
         return round(grade,2)
@@ -36,9 +36,13 @@ class Controller:
     def get_score(self):
         return self.__repo.get_score()
 
+    # We check to see if any of the user answers are in the correct answers AND IMPORTANT NOTICE HERE:
+    # Since only questions with choices can be partially correct, we need to check that
+    # the question answer is made out of letters a,b,c,d,e. There are some questions where you have to reply with numbers, ip addresses etc.
+    # If you got them wrong, then they are for sure not partially correct, but rather incorrect
     @staticmethod
     def check_if_partially_correct(user_answer, correct_answer):
-        return any(element1 in element2 or element2 in element1 for element1 in user_answer for element2 in correct_answer)
+        return any(element1 in element2 or element2 in element1 for element1 in user_answer for element2 in correct_answer) and (all(element.isalpha() for element in correct_answer))
 
     @staticmethod
     # One wrong answers cancels out one right answer
