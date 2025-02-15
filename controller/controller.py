@@ -39,6 +39,16 @@ class Controller:
     def reset_score(self):
         self.__repo.reset_score()
 
+    def add_wrong_question(self, question):
+        self.__repo.add_wrong_question(question)
+
+    def reset_wrong_questions(self):
+        self.__repo.reset_wrong_questions()
+
+    def get_wrong_questions(self):
+        return self.__repo.get_wrong_questions()
+
+
     # We check to see if any of the user answers are in the correct answers AND IMPORTANT NOTICE HERE:
     # Since only questions with choices can be partially correct, we need to check that
     # the question answer is made out of letters a,b,c,d,e. There are some questions where you have to reply with numbers, ip addresses etc.

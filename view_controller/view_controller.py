@@ -49,6 +49,16 @@ class View:
     def print_time_left(self):
         print(Bcolors.ORANGE + f"Time left: {(int(self.__remaining_time / 60))} minutes and {self.__remaining_time % 60} seconds" + Bcolors.NORMAL)
 
+    # Function to help the user revise ad have a chance to check for their mistakes
+    def revision(self):
+        wrong_questions = self.__controller.get_wrong_questions()
+        ans = input("Do you want to revise your wrong answers? (y/n): ")
+        if ans == "y":
+            for key,value in wrong_questions.items():
+                print("\n" + f"{value['label_nr']}" +". "+f"{value['question']}")
+                print(f"Your answer: {value['user_answer']}")
+                print(f"Correct answer: {value['correct']}")
+
     # Prints the welcome message that the user sees on the console when they first open the app
     @staticmethod
     def print_welcome_message():
@@ -62,8 +72,8 @@ class View:
 
         # Print the answers
         answers = current_question['answers']
-        for i in range(len(answers)):
-            print(f"{chr(i + 97)}) {answers[i]}")
+        for j in range(len(answers)):
+            print(f"{chr(j + 97)}) {answers[j]}")
 
         # Get user input
         user_answer = input(">> ")
@@ -75,6 +85,12 @@ class View:
             self.__controller.update_score("correct", user_answer, current_question['correct'])
         # Case 2: A-> the answer is partially correct or B-> the answer is incorrect
         else:
+            # Prepare to add this question to a wrong questions dictionary that can be checked at the end by the user
+            wrong_question = current_question.copy()
+            wrong_question['user_answer'] = user_answer
+            wrong_question['label_nr'] = str(i+1)
+            self.__controller.add_wrong_question(wrong_question)
+            # Check if the question is in case A or B
             partially_correct = Controller.check_if_partially_correct(user_answer, current_question['correct'])
             # A) the answer is partially correct
             if partially_correct:
@@ -145,7 +161,11 @@ class View:
                 # Print how much time the user has left.
                 self.print_time_left()
 
-            # Ask the user if they want to play again, if he does we need to reset the score
+
+            # Allow the user to review his mistakes if he so desires
+            self.revision()
+
+            # Ask the user if they want to play again, if they do we need to reset the score
             if not self.ask_user_to_play_again():
                 break
             else:

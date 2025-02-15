@@ -11,6 +11,8 @@ class Repository:
         self.__next_available_id = len(data)
         # Keep track of your score
         self.__score = 0
+        # Store the wrong questions so we can show them at the end if the user so desires
+        self.__wrong_questions = {}
 
 
     def get_data(self):
@@ -58,6 +60,15 @@ class Repository:
 
     def add_partial_score(self, partial_score):
         self.__score+=partial_score
+
+    def add_wrong_question(self, question):
+        self.__wrong_questions[question['id']] = question
+
+    def reset_wrong_questions(self):
+        self.__wrong_questions = {}
+
+    def get_wrong_questions(self):
+        return self.__wrong_questions.copy()
 
 
 
