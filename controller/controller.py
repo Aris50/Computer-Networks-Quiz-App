@@ -36,6 +36,9 @@ class Controller:
     def get_score(self):
         return self.__repo.get_score()
 
+    def reset_score(self):
+        self.__repo.reset_score()
+
     # We check to see if any of the user answers are in the correct answers AND IMPORTANT NOTICE HERE:
     # Since only questions with choices can be partially correct, we need to check that
     # the question answer is made out of letters a,b,c,d,e. There are some questions where you have to reply with numbers, ip addresses etc.

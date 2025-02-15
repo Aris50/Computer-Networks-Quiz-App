@@ -1,6 +1,7 @@
 from controller.controller import Controller
 import random
 import time
+import threading
 
 # TODO: handle user input errors
 class Bcolors:
@@ -14,6 +15,8 @@ class Bcolors:
 class View:
     def __init__(self):
         self.__controller = Controller()
+        self.__remaining_time = 0
+        self.__lock = threading.Lock()
 
     #Prints all the questions on the screen
     def print_all_questions(self):
@@ -32,6 +35,19 @@ class View:
             return True
         print("Bye!")
         return False
+
+    def countdown(self):
+        while self.__remaining_time > 0:
+            with self.__lock:
+                self.__remaining_time -= 1
+            time.sleep(1)
+
+    def start_countdown(self):
+        countdown_thread = threading.Thread(target=self.countdown,)
+        countdown_thread.start()
+
+    def print_time_left(self):
+        print(Bcolors.ORANGE + f"Time left: {(int(self.__remaining_time / 60))} minutes and {self.__remaining_time % 60} seconds" + Bcolors.NORMAL)
 
     # Prints the welcome message that the user sees on the console when they first open the app
     @staticmethod
@@ -88,6 +104,10 @@ class View:
             else:
                 number = self.__controller.get_number_of_questions()
 
+            # Set the timer and start the countdown
+            self.__remaining_time  = number*60
+            self.start_countdown()
+
             # We keep in valid_id_list al the ids of the questions that were not asked yet
             valid_id_list = self.__controller.get_all_ids()
 
@@ -103,14 +123,18 @@ class View:
 
                 # If we are not at the last question, we print the score, as usual.
                 # If we are, we print the average because the game is over, and we proceed to give the user his grade
-                if i != number-1:
+                if i != number-1 and self.__remaining_time:
                     print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
                 else:
                     print("\n\n-----------------------------------")
+                    if self.__remaining_time==0:
+                        print("TIME IS UP!")
                     print("Your final score is " + Bcolors.BLUE + str(
                         self.__controller.calculate_grade(number)) + "%"+ Bcolors.NORMAL)
                     print("-----------------------------------\n\n")
                     print(Bcolors.CORRECT+"Thank you for playing!"+Bcolors.NORMAL)
+                    # We make sure we reset the program here
+                    break
 
                 # If we have get to an empty list and the for loop is still going:
                 # it means that all the questions were asked exactly once, and the number of questions that the user entered is not yet finished.
@@ -118,8 +142,14 @@ class View:
                 if not valid_id_list:
                     valid_id_list = self.__controller.get_all_ids()
 
+                # Print how much time the user has left.
+                self.print_time_left()
+
+            # Ask the user if they want to play again, if he does we need to reset the score
             if not self.ask_user_to_play_again():
                 break
+            else:
+                self.__controller.reset_score()
 
 
 
