@@ -67,10 +67,11 @@ class Controller:
                 correct_user_answers+=1
             else:
                 wrong_user_answers+=1
+
         # Cancelling out
         final = correct_user_answers - wrong_user_answers
 
-        #If there are uncanceled right answers, we return the score (with 2 decimals only)
+        # If there are uncanceled right answers, we return the score (with 2 decimals only)
         if final:
             return round(1 / len(correct_answer) * final, 2)
         return 0
