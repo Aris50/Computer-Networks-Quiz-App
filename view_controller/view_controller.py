@@ -97,6 +97,7 @@ class View:
             if ans == "y":
                 for key,value in wrong_questions.items():
                     print("\n" + f"{value['label_nr']}" +". "+f"{value['question']}")
+                    print(f"{value['answers']}")
                     print(f"Your answer: {value['user_answer']}")
                     print(f"Correct answer: {value['correct']}")
             elif ans != "n":
@@ -165,7 +166,9 @@ class View:
 
     def answer_question_view(self,current_question, i, number):
         # Print the question
-        print("\n" + str(i+1) + "/" + str(number) + ". " + current_question['question'])
+        question_status = self.__controller.get_answer_status(current_question['id'])
+        #print("\n" + Bcolors.CORRECT + "Answered correctly: " + str(question_status['answered_correctly'])+Bcolors.NORMAL + "\n"+Bcolors.INCORRECT+ "Answered wrong: "+ str(question_status['answered_wrong']) + Bcolors.NORMAL)
+        print("\n" + str(i+1) + "/" + str(number) + ". " + current_question['question'] + "  " + "(c:" + Bcolors.CORRECT +str(question_status['answered_correctly'])+Bcolors.NORMAL + "/w: "+ Bcolors.INCORRECT+str(question_status['answered_wrong']) + Bcolors.NORMAL + ")")
 
         # Print the answers
         answers = current_question['answers']
@@ -180,8 +183,12 @@ class View:
         if user_answer == current_question['correct']:
             print(Bcolors.CORRECT + "CORRECT!" + Bcolors.NORMAL)
             self.__controller.update_score("correct", user_answer, current_question['correct'])
+            # Update the question status
+            self.__controller.update_answer_status(current_question['id'], True)
         # Case 2: A-> the answer is partially correct or B-> the answer is incorrect
         else:
+            # Update the question status
+            self.__controller.update_answer_status(current_question['id'], False)
             # Prepare to add this question to a wrong questions dictionary that can be checked at the end by the user
             wrong_question = current_question.copy()
             wrong_question['user_answer'] = user_answer
@@ -293,10 +300,6 @@ class View:
                         break
                     else:
                         self.__controller.reset_score()
-
-
-
-
 
 
             elif choice == "0":

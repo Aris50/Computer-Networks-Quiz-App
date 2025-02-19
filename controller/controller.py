@@ -72,6 +72,15 @@ class Controller:
     def get_wrong_questions(self):
         return self.__repo.get_wrong_questions()
 
+    def update_answer_status(self, question_id, status):
+        self.__repo.update_answer_status(question_id, status)
+
+    def get_answer_status(self, question_id):
+        return self.__repo.get_answer_status(question_id)
+
+    def reset_question_status(self):
+        self.__repo.reset_question_status()
+
 
     # We check to see if any of the user answers are in the correct answers AND IMPORTANT NOTICE HERE:
     # Since only questions with choices can be partially correct, we need to check that

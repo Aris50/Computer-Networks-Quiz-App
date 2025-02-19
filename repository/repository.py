@@ -5,19 +5,27 @@ class Repository:
             # Get the data from the file
             data = json.load(file)
 
+        with open('question_status.json', 'r') as file:
+            # Get the data from the file
+            questions_status = json.load(file)
+
         # Create a dictionary with the id of the question as the key, and with the right prefixes:
-        # 1) Prefix the questions
+        # 1) Prefix the questions (because we take them from safety and they don't have prefixes, so we make them)
         for question in data:
             Repository.set_question_prefix(question)
-        # 2) Create the dictionary with all data
+        # 2a) Create the dictionary with all data
         self.__data = {question['id']: question for question in data}
-        self.log_data('questions.json')
+        # 2b) Save the prefixing
+        self.log_data('questions.json', self.__data)
 
         # Create smaller dictionaries with all the separate types of questions
         self.__tf_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:2] == 'tf'}
         self.__mcs_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:3] == 'mcs'}
         self.__mcm_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:3] == 'mcm'}
         self.__fr_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:2] == 'fr'}
+
+        # Create a dictionary with the id as a key and the status of the question as the value
+        self.__question_status = {question['id']: question for question in questions_status}
 
         # Keep track of the next available ID so id's do not repeat
         self.__next_available_id = len(data)
@@ -67,6 +75,7 @@ class Repository:
         self.__data = {key: self.__data[key] for key in new_keys}
         #self.log_data('questions.json')
 
+    #TODO: Also modify the other question types, and the question_status
     def add_question(self, new_question):
         # Give the new question a unique ID
         next_id = str(self.__next_available_id)
@@ -76,6 +85,7 @@ class Repository:
         self.__data[next_id] = new_question
         #self.log_data('questions.json')
 
+    #TODO: Also modify the other question types, and the question_status
     def remove_question(self, question_id):
         if question_id in self.__data.keys():
             del self.__data[question_id]
@@ -84,9 +94,10 @@ class Repository:
     def get_number_of_questions(self):
         return len(self.__data)
 
-    def log_data(self, file_name):
+    @staticmethod
+    def log_data(file_name, data):
         with open(file_name, 'w') as file:
-            json.dump(list(self.__data.values()), file, indent=4)
+            json.dump(list(data.values()), file, indent=4)
 
     def increment_score(self):
         self.__score+=1
@@ -108,6 +119,22 @@ class Repository:
 
     def get_wrong_questions(self):
         return self.__wrong_questions.copy()
+
+    def update_answer_status(self, question_id, status):
+        if status:
+             self.__question_status[question_id]['answered_correctly'] += 1
+        else:
+            self.__question_status[question_id]['answered_wrong'] += 1
+        self.log_data('question_status.json', self.__question_status)
+
+    def get_answer_status(self, question_id):
+        return self.__question_status[question_id]
+
+    def reset_question_status(self):
+        for key in self.__question_status.keys():
+            self.__question_status[key]['answered_correctly'] = 0
+            self.__question_status[key]['answered_wrong'] = 0
+        self.log_data('question_status.json', self.__question_status)
 
     '''
     fr -> free response
