@@ -26,15 +26,20 @@ class View:
 
     @staticmethod
     def ask_user_to_play_again():
-        answer = input("\nDo you want to play again? (y/n):\n>>")
-        if answer == "y":
-            print("Restarting the game...")
-            for i in range (3):
-                print("...")
-                time.sleep(1)
-            return True
-        print("Bye!")
-        return False
+        answer="n/a"
+        while answer not in ["y", "n"]:
+            answer = input("\nDo you want to play again? (y/n):\n>>")
+            if answer == "y":
+                print("Restarting the game...")
+                for i in range (3):
+                    print("...")
+                    time.sleep(1)
+                return True
+            elif answer == "n":
+                print("Bye!")
+                return False
+            else:
+                print(Bcolors.INCORRECT + "Invalid input. Please enter y or n." + Bcolors.NORMAL)
 
     def countdown(self):
         while self.__remaining_time > 0:
@@ -52,12 +57,17 @@ class View:
     # Function to help the user revise ad have a chance to check for their mistakes
     def revision(self):
         wrong_questions = self.__controller.get_wrong_questions()
-        ans = input("Do you want to revise your wrong answers? (y/n): ")
-        if ans == "y":
-            for key,value in wrong_questions.items():
-                print("\n" + f"{value['label_nr']}" +". "+f"{value['question']}")
-                print(f"Your answer: {value['user_answer']}")
-                print(f"Correct answer: {value['correct']}")
+        ans="n/a"
+        # Handle correctly wrong input
+        while ans not in ["y", "n"]:
+            ans = input("Do you want to revise your wrong answers? (y/n): ")
+            if ans == "y":
+                for key,value in wrong_questions.items():
+                    print("\n" + f"{value['label_nr']}" +". "+f"{value['question']}")
+                    print(f"Your answer: {value['user_answer']}")
+                    print(f"Correct answer: {value['correct']}")
+            elif ans != "n":
+                print(Bcolors.INCORRECT+"Invalid input. Please enter y or n."+Bcolors.NORMAL)
 
     # Prints the welcome message that the user sees on the console when they first open the app
     @staticmethod
@@ -114,8 +124,11 @@ class View:
             # Ask the user how many questions they want to answer
             number = input("How many questions do you want to answer?(write all if you want to answer all questions): ")
 
-            # Prepare the number of questions.
+            # Prepare the number of questions. Make sure the input is a valid number
             if number != "all":
+                while not number.isdigit() or int(number) <= 0:
+                    print(Bcolors.INCORRECT+"Please enter a valid number"+Bcolors.NORMAL)
+                    number = input("How many questions do you want to answer?(write all if you want to answer all questions): ")
                 number = int(number)
             else:
                 number = self.__controller.get_number_of_questions()
@@ -147,7 +160,8 @@ class View:
                         print("TIME IS UP!")
                     print("Your final score is " + Bcolors.BLUE + str(
                         self.__controller.calculate_grade(number)) + "%"+ Bcolors.NORMAL)
-                    print("-----------------------------------\n\n")
+                    print("-----------------------------------\n")
+                    print(f"You had: {int(self.__remaining_time/60)} minutes and {self.__remaining_time%60} seconds left.")
                     print(Bcolors.CORRECT+"Thank you for playing!"+Bcolors.NORMAL)
                     # We make sure we reset the program here
                     break
@@ -167,6 +181,7 @@ class View:
 
             # Ask the user if they want to play again, if they do we need to reset the score
             if not self.ask_user_to_play_again():
+                self.__remaining_time=0
                 break
             else:
                 self.__controller.reset_score()
