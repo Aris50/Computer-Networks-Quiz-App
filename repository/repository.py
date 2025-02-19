@@ -75,6 +75,9 @@ class Repository:
         self.__data = {key: self.__data[key] for key in new_keys}
         #self.log_data('questions.json')
 
+    def reset_wrong_questions(self):
+        self.__wrong_questions = {}
+
     #TODO: Also modify the other question types, and the question_status
     def add_question(self, new_question):
         # Give the new question a unique ID

@@ -40,6 +40,9 @@ class Controller:
     def get_number_of_questions(self):
         return self.__repo.get_number_of_questions()
 
+    def reset_wrong_questions(self):
+        self.__repo.reset_wrong_questions()
+
     def get_all_ids(self):
         # Return a list with all the id's of all the question
         every_id = list(self.__repo.get_keys())

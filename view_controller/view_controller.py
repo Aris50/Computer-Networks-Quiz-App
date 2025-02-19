@@ -277,6 +277,7 @@ class View:
                         break
                     else:
                         self.__controller.reset_score()
+                        self.__controller.reset_wrong_questions()
             elif choice == "2":
                 # We print the welcome message for the practice mode
                 View.print_welcome_message_2()
@@ -304,6 +305,7 @@ class View:
                         break
                     else:
                         self.__controller.reset_score()
+                        self.__controller.reset_wrong_questions()
 
 
             elif choice == "0":
