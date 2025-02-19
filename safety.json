@@ -8,7 +8,7 @@
             "2"
         ],
         "correct": "a",
-        "id": "mcs0"
+        "id": 0
     },
     {
         "question": "The ARP protocol helps with:",
@@ -18,7 +18,7 @@
             "Determining the IP address when the DNS server is known"
         ],
         "correct": "a",
-        "id": "mcs1"
+        "id": 1
     },
     {
         "question": "Which of the following is the correct host range for the subnet in which we can find the IP address 192.168.168.188/255.255.255.192 ?",
@@ -29,13 +29,13 @@
             "192.168.168.129-190"
         ],
         "correct": "d",
-        "id": "mcs2"
+        "id": 2
     },
     {
         "question": "What is the broadcast address for subnet 200.35.1.192/27?",
         "answers": [],
         "correct": "200.35.1.223",
-        "id": "fr3"
+        "id": 3
     },
     {
         "question": "Consider the following netmask: 255.255.0.0, the network part(network length) is formed by a number of bits equal to",
@@ -46,7 +46,7 @@
             "impossible to determine"
         ],
         "correct": "c",
-        "id": "mcs4"
+        "id": 4
     },
     {
         "question": "In TCP, bytes not read from the stream:",
@@ -57,7 +57,7 @@
             "Stay available for the next read"
         ],
         "correct": "d",
-        "id": "mcs5"
+        "id": 5
     },
     {
         "question": "What are the values of the network address and the netmask in the default route?",
@@ -68,7 +68,7 @@
             "0.0.0.0 0.0.0.0"
         ],
         "correct": "d",
-        "id": "mcs6"
+        "id": 6
     },
     {
         "question": "Which of the following address can be a valid host IP that can be allocated to a host:",
@@ -78,7 +78,7 @@
             "223.245.256.17"
         ],
         "correct": "ab",
-        "id": "mcm7"
+        "id": 7
     },
     {
         "question": "Not all IP addresses from the class 192.168.0.0/8 are private",
@@ -87,13 +87,13 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf8"
+        "id": 8
     },
     {
         "question": "A TCP header is larger than a UDP header by how many bytes?",
         "answers": [],
         "correct": "12",
-        "id": "fr9"
+        "id": 9
     },
     {
         "question": "The checksum in the IP header is computed:",
@@ -104,7 +104,7 @@
             "every time a router believes the packet has been altered"
         ],
         "correct": "bc",
-        "id": "mcm10"
+        "id": 10
     },
     {
         "question": "Which of the following is a valid IP/Netmask combination?",
@@ -115,7 +115,7 @@
             "209.220.186.8/255.255.255.252"
         ],
         "correct": "ad",
-        "id": "mcm11"
+        "id": 11
     },
     {
         "question": "Which of the following IP addresses cannot be broadcast addresses?",
@@ -126,7 +126,7 @@
             "25.0.2.31"
         ],
         "correct": "bc",
-        "id": "mcm12"
+        "id": 12
     },
     {
         "question": "Which of the following addresses can be valid network addresses provided appropriate network masks?",
@@ -138,7 +138,7 @@
             "193.231.20.3"
         ],
         "correct": "bd",
-        "id": "mcm13"
+        "id": 13
     },
     {
         "question": "A company has three departments: Offices, Public and Managers. The offices have 123 computers, Public Relationship has 29 computers and Managers have 5 computers. The company wants to make a network such that: - every computer has access to the internet - have minimum costs - it must be certainly known from which department some webpages are accessed from the HQ in another city Provide a good configuration for these requirements:",
@@ -149,7 +149,7 @@
             "3 subnetworks, 192.168.0.0/25, 192.168.0.128/27, 192.168.0.160/29 and connect them to a central router which translates all the IPs on 192.168.0.0/24 with the IP 30.0.0.5"
         ],
         "correct": "c",
-        "id": "mcs14"
+        "id": 14
     },
     {
         "question": "Which of the following are not contained in a routing table?",
@@ -160,7 +160,7 @@
             "source address"
         ],
         "correct": "d",
-        "id": "mcs15"
+        "id": 15
     },
     {
         "question": "What is the broadcast address of the network 190.60.16.0/28?",
@@ -171,7 +171,7 @@
             "190.60.16.7"
         ],
         "correct": "c",
-        "id": "mcs16"
+        "id": 16
     },
     {
         "question": "What happens after receiving one duplicate Acknowledgment?",
@@ -182,19 +182,19 @@
             "Congestion Window is cut in half and grows exponentially"
         ],
         "correct": "a",
-        "id": "mcs17"
+        "id": 17
     },
     {
         "question": "What is the last valid host on the network that 10.215.81.114 / 255.240.0.0 is a part of?",
         "answers": [],
         "correct": "10.223.255.254",
-        "id": "fr18"
+        "id": 18
     },
     {
         "question": "Consider the following network address: 192.0.2.64 . How many net masks can it be used with?",
         "answers": [],
         "correct": "5",
-        "id": "fr19"
+        "id": 19
     },
     {
         "question": "accept() is required in any UDP server",
@@ -203,7 +203,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf20"
+        "id": 20
     },
     {
         "question": "Consider one SWITCH and 10 PC's connected to it. Which of the following is false?",
@@ -214,13 +214,13 @@
             "when PC1 sends a message to PC5, the message will be received by all the PC's but only PC5 processes it; the answer will be also received by all the PC's but only PC1 will process it"
         ],
         "correct": "bcd",
-        "id": "mcm21"
+        "id": 21
     },
     {
         "question": "What is the netmask of the minimum sized network that has as broadcast 70.71.79.255 and also contains the host IP address 70.71.79.240 ?",
         "answers": [],
         "correct": "255.255.255.224",
-        "id": "fr22"
+        "id": 22
     },
     {
         "question": "Why would an ISP aggregate smaller networks into a larger one?",
@@ -231,19 +231,19 @@
             "In order to group all networks for a specific client together"
         ],
         "correct": "c",
-        "id": "mcs23"
+        "id": 23
     },
     {
         "question": "How many bits of 0 are in the following netmask? 255.255.255.254?",
         "answers": [],
         "correct": "1",
-        "id": "fr24"
+        "id": 24
     },
     {
         "question": "What is the netmask of the largest network with the address 84.176.0.0 ? (as x.y.z.t)",
         "answers": [],
         "correct": "255.240.0.0",
-        "id": "fr25"
+        "id": 25
     },
     {
         "question": "When the Congestion Window is below the Threshold:",
@@ -253,13 +253,13 @@
             "The window is set to 1 MSS"
         ],
         "correct": "b",
-        "id": "mcs26"
+        "id": 26
     },
     {
         "question": "Given the address 137.25.28.0/255.255.254.0 provide the maximum number of valid subnets that can be obtained from splitting this network",
         "answers": [],
         "correct": "128",
-        "id": "fr27"
+        "id": 27
     },
     {
         "question": "Which of the following can be a mask, such that 62.244.89.16 is a valid network address?",
@@ -271,7 +271,7 @@
             "255.255.255.128"
         ],
         "correct": "abc",
-        "id": "mcm28"
+        "id": 28
     },
     {
         "question": "What does a mask /29 mean?",
@@ -282,7 +282,7 @@
             "The maximum number of IP addresses that can be assigned to hosts is 8"
         ],
         "correct": "ac",
-        "id": "mcm29"
+        "id": 29
     },
     {
         "question": "What netmask is needed to split a network with address 133.25.0.0/16 in 1000 subnets of 14 hosts each?",
@@ -293,7 +293,7 @@
             "/15"
         ],
         "correct": "b",
-        "id": "mcs30"
+        "id": 30
     },
     {
         "question": "Which of the following is a private IP address ?",
@@ -304,7 +304,7 @@
             "12.0.0.2"
         ],
         "correct": "a",
-        "id": "mcs31"
+        "id": 31
     },
     {
         "question": "Which of the following are valid subnetwork addresses ?",
@@ -315,7 +315,7 @@
             "177.91.107.1/25"
         ],
         "correct": "ac",
-        "id": "mcm32"
+        "id": 32
     },
     {
         "question": "connect() is required in any TCP server",
@@ -324,7 +324,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf33"
+        "id": 33
     },
     {
         "question": "UDP is not located at the Link layer",
@@ -333,7 +333,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf34"
+        "id": 34
     },
     {
         "question": "What happens if the Gateway in a Routing table entry is 0.0.0.0?",
@@ -344,7 +344,7 @@
             "The router puts the packet on the associated network interface with this route"
         ],
         "correct": "d",
-        "id": "mcs35"
+        "id": 35
     },
     {
         "question": "Which IP field helps to check the order of the fragments?",
@@ -355,7 +355,7 @@
             "offset"
         ],
         "correct": "d",
-        "id": "mcs36"
+        "id": 36
     },
     {
         "question": "Which is the closest number to the largest routing table in the case of class full IP Addressing?",
@@ -366,7 +366,7 @@
             "2^8+2^16"
         ],
         "correct": "b",
-        "id": "mcs37"
+        "id": 37
     },
     {
         "question": "A TCP connection is terminated through:",
@@ -377,7 +377,7 @@
             "none of the answers are correct"
         ],
         "correct": "ab",
-        "id": "mcm38"
+        "id": 38
     },
     {
         "question": "254.255.0.0 is a valid netmask",
@@ -386,7 +386,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf39"
+        "id": 39
     },
     {
         "question": "Which of the following is not a characteristic of the IP protocol?",
@@ -397,13 +397,13 @@
             "It defines the Internet addressing system"
         ],
         "correct": "c",
-        "id": "mcs40"
+        "id": 40
     },
     {
         "question": "Write as [network address]/[xx] - in the most compact and ordered way - the addressing space 62.255.254.224...63.64.0.31. (if multiple combinations are needed write them separated by comas without spaces or other characters)",
         "answers": [],
         "correct": "62.255.254.224/27,62.255.255.0/24,63.0.0.0/10,63.64.0.0/27",
-        "id": "fr41"
+        "id": 41
     },
     {
         "question": "The broadcast for 192.120.0.1/16 is 192.120.255.255",
@@ -412,7 +412,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf42"
+        "id": 42
     },
     {
         "question": "What is the range of all IPs in which the following given IP resides :194.168.19.69/28 ?",
@@ -423,7 +423,7 @@
             "194.168.19.64 \u2013 194.168.19.79"
         ],
         "correct": "d",
-        "id": "mcs43"
+        "id": 43
     },
     {
         "question": "The network address cannot be calculated using the netmask and an IP address",
@@ -432,7 +432,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf44"
+        "id": 44
     },
     {
         "question": "The following code is a: \nlisten(s, 5); \nwhile (1)\n{\n\tmemset(&client, 0, sizeof(client));\n\tl = sizeof(client);\n\tc = accept(s, (struct sockaddr *) &client, &l);\n\tif (fork() == 0)\n{\n\t\tworker();\n}\n\twait(0);\n}",
@@ -443,7 +443,7 @@
             "concurrent multiplexed server"
         ],
         "correct": "a",
-        "id": "mcs45"
+        "id": 45
     },
     {
         "question": "Which of the following IP sets belong to 209.220.186.12/255.255.255.252 ip class?",
@@ -454,7 +454,7 @@
             "209.220.186.13, 209.220.186.14, 209.220.186.15, 209.220.186.16"
         ],
         "correct": "c",
-        "id": "mcs46"
+        "id": 46
     },
     {
         "question": "Two connected routers are configured with RIP routing. What will be the result when a router received a routing update that contains a higher-cost path to a network already in its routing table?",
@@ -465,7 +465,7 @@
             "the existing routing table entry will be deleted from the routing table and all routers will exchange routing updates to reach convergence"
         ],
         "correct": "b",
-        "id": "mcs47"
+        "id": 47
     },
     {
         "question": "Which one of the following addresses is a public IP address assignable to a computer ?",
@@ -476,13 +476,13 @@
             "225.46.130.1"
         ],
         "correct": "bd",
-        "id": "mcm48"
+        "id": 48
     },
     {
         "question": "How many /27 networks are needed such that they can be supernetted to a /24 network?",
         "answers": [],
         "correct": "8",
-        "id": "fr49"
+        "id": 49
     },
     {
         "question": "193.231.20.0/24 can be divided in exactly X subnets of equal sizes. X=?",
@@ -494,7 +494,7 @@
             "4 subnets"
         ],
         "correct": "de",
-        "id": "mcm50"
+        "id": 50
     },
     {
         "question": "In which host range is the IP address 175.156.68.80 255.255.255.192?",
@@ -505,7 +505,7 @@
             "175.156.68.65-128"
         ],
         "correct": "c",
-        "id": "mcs51"
+        "id": 51
     },
     {
         "question": "ARP can be used for...",
@@ -516,7 +516,7 @@
             "Mapping network addresses to physical (MAC) addresses"
         ],
         "correct": "d",
-        "id": "mcs52"
+        "id": 52
     },
     {
         "question": "TCP is located at the Transport layer",
@@ -525,7 +525,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf53"
+        "id": 53
     },
     {
         "question": "Broadcasting is",
@@ -536,7 +536,7 @@
             "A mechanism which is used when the transmission of a packet fails"
         ],
         "correct": "a",
-        "id": "mcs54"
+        "id": 54
     },
     {
         "question": "255.192.0.0 is a valid netmask for the network",
@@ -547,7 +547,7 @@
             "192.193.1.0"
         ],
         "correct": "ab",
-        "id": "mcm55"
+        "id": 55
     },
     {
         "question": "The time-to-live for a packet(TTL) is expressed in:",
@@ -559,7 +559,7 @@
             "milliseconds"
         ],
         "correct": "d",
-        "id": "mcs56"
+        "id": 56
     },
     {
         "question": "Which is the correct expression for the length of UDP datagram payload ?",
@@ -570,7 +570,7 @@
             "UDP length = IP length \u2013 IP header\u2019s length - UDP header length"
         ],
         "correct": "d",
-        "id": "mcs57"
+        "id": 57
     },
     {
         "question": "What will you get if you 'or' together the netmask of a network and one IP in that network?",
@@ -581,13 +581,13 @@
             "The class of the IP."
         ],
         "correct": "a",
-        "id": "mcs58"
+        "id": 58
     },
     {
         "question": "Write the network mask (only as /x.y.z.t) of the minimum sized network that contain both 80.81.82.83 and 80.83.84.85.",
         "answers": [],
         "correct": "255.252.0.0",
-        "id": "fr59"
+        "id": 59
     },
     {
         "question": "What is true about ICMP packets ?",
@@ -598,7 +598,7 @@
             "ICMP is encapsulated within UDP datagrams"
         ],
         "correct": "c",
-        "id": "mcs60"
+        "id": 60
     },
     {
         "question": "Which of the following cannot be a broadcast address ?",
@@ -610,7 +610,7 @@
             "21.20.19.18"
         ],
         "correct": "de",
-        "id": "mcm61"
+        "id": 61
     },
     {
         "question": "All IP addresses from the class 10.0.0.0/16 are private",
@@ -619,7 +619,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf62"
+        "id": 62
     },
     {
         "question": "Which of the following is true about the IP address 10.16.3.65/23?",
@@ -630,19 +630,19 @@
             "The last valid host address in the subnet is 10.16.2.254"
         ],
         "correct": "c",
-        "id": "mcs63"
+        "id": 63
     },
     {
         "question": "What is the broadcast address for IP combination 132.45.99.0/19?",
         "answers": [],
         "correct": "132.45.127.255",
-        "id": "fr64"
+        "id": 64
     },
     {
         "question": "What is the network address and mask of the smallest subnet that fits these two IP addresses: 180.181.182.183 and 180.186.12.180? (addr/x.y.z.t format)",
         "answers": [],
         "correct": "180.176.0.0/255.240.0.0",
-        "id": "fr65"
+        "id": 65
     },
     {
         "question": "SOCK_DGRAM is used for UDP connections.",
@@ -651,7 +651,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf66"
+        "id": 66
     },
     {
         "question": "All IP addresses from the class 172.0.0.0/8 are private",
@@ -660,7 +660,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs67"
+        "id": 67
     },
     {
         "question": "A DNS server can be a Default Gateway",
@@ -669,7 +669,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs68"
+        "id": 68
     },
     {
         "question": "A switch is more advanced than a hub",
@@ -678,7 +678,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs69"
+        "id": 69
     },
     {
         "question": "IP is located at the Link layer",
@@ -687,7 +687,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs70"
+        "id": 70
     },
     {
         "question": "A computer connects to a switch using a Cross-Over cable",
@@ -696,7 +696,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs71"
+        "id": 71
     },
     {
         "question": "Are MAC addresses guaranteed to be unique?",
@@ -707,7 +707,7 @@
             "Depends on the network adapter you have."
         ],
         "correct": "a",
-        "id": "mcs72"
+        "id": 72
     },
     {
         "question": "There can't be multiple computers with the address 127.0.0.1",
@@ -716,7 +716,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs73"
+        "id": 73
     },
     {
         "question": "ARP means Address Resolution Protocol",
@@ -725,7 +725,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs74"
+        "id": 74
     },
     {
         "question": "A UDP socket is created using the parameters AF_INET and SOCK_STREAM",
@@ -734,7 +734,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs75"
+        "id": 75
     },
     {
         "question": "255.255.255.255 is not the MAC broadcasting address",
@@ -743,7 +743,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs76"
+        "id": 76
     },
     {
         "question": "Which of the following describes 'big endian'?",
@@ -755,7 +755,7 @@
             "Most significant byte last."
         ],
         "correct": "d",
-        "id": "mcs77"
+        "id": 77
     },
     {
         "question": "Which of the following involve NAT?",
@@ -765,7 +765,7 @@
             "Accessing the web from an internal network. Your PC's network will be translated to your public IP (i.e., home network)."
         ],
         "correct": "abc",
-        "id": "mcm78"
+        "id": 78
     },
     {
         "question": "127.16.0.1 is a private IP address",
@@ -774,7 +774,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs79"
+        "id": 79
     },
     {
         "question": "The recvfrom() call doesn't transmit data to the TCP client",
@@ -783,7 +783,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs80"
+        "id": 80
     },
     {
         "question": "192.168.1.155 belongs to the class 192.168.1.0/25",
@@ -792,7 +792,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs81"
+        "id": 81
     },
     {
         "question": "The MAC address has 32 bits",
@@ -801,7 +801,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs82"
+        "id": 82
     },
     {
         "question": "A class /24 can be split into 3 subclasses /26.",
@@ -810,7 +810,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs83"
+        "id": 83
     },
     {
         "question": "A network with the netmask 255.255.255.0 has 2^8=128 IPs.",
@@ -819,7 +819,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs84"
+        "id": 84
     },
     {
         "question": "How long is an IPv4 address?",
@@ -830,7 +830,7 @@
             "6 bytes"
         ],
         "correct": "ac",
-        "id": "mcm85"
+        "id": 85
     },
     {
         "question": "What command would you use to check the Datalink Layer if it works (on Windows)?",
@@ -842,7 +842,7 @@
             "ipconfig"
         ],
         "correct": "a",
-        "id": "mcs86"
+        "id": 86
     },
     {
         "question": "UDP is not connection-oriented",
@@ -851,7 +851,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs87"
+        "id": 87
     },
     {
         "question": "Which of the following is not a characteristic of the IP protocol?",
@@ -862,25 +862,25 @@
             "Is considered an unreliable protocol."
         ],
         "correct": "a",
-        "id": "mcs88"
+        "id": 88
     },
     {
         "question": "The maximum number of actual hosts for a class C network is",
         "answers": [],
         "correct": "254",
-        "id": "fr89"
+        "id": 89
     },
     {
         "question": "How many hosts can be addressed on 10.0.0.0/16?",
         "answers": [],
         "correct": "65534",
-        "id": "fr90"
+        "id": 90
     },
     {
         "question": "Represent /26 in doted decimal format:",
         "answers": [],
         "correct": "255.255.255.192",
-        "id": "fr91"
+        "id": 91
     },
     {
         "question": "Which of the following is not a characteristic of the IP protocol?",
@@ -891,7 +891,7 @@
             "It defines the Internet addressing system"
         ],
         "correct": "c",
-        "id": "mcs92"
+        "id": 92
     },
     {
         "question": "Having more than one DHCP server on the same subnet of a network is:",
@@ -902,7 +902,7 @@
             "not possible"
         ],
         "correct": "c",
-        "id": "mcs93"
+        "id": 93
     },
     {
         "question": "What is the main function of DNS?",
@@ -913,7 +913,7 @@
             "provides network connectivity to a computer"
         ],
         "correct": "b",
-        "id": "mcs94"
+        "id": 94
     },
     {
         "question": "Gateways are used for:",
@@ -924,7 +924,7 @@
             "transfer files between different platforms"
         ],
         "correct": "a",
-        "id": "mcs95"
+        "id": 95
     },
     {
         "question": "What is the maximum number of hosts for a class C network?",
@@ -935,7 +935,7 @@
             "254"
         ],
         "correct": "d",
-        "id": "mcs96"
+        "id": 96
     },
     {
         "question": "What is the maximum number of networks in a class A network?",
@@ -946,7 +946,7 @@
             "254"
         ],
         "correct": "a",
-        "id": "mcs97"
+        "id": 97
     },
     {
         "question": "Which one of the following addresses is a public IP address?",
@@ -957,7 +957,7 @@
             "1.0.0.0/8"
         ],
         "correct": "bd",
-        "id": "mcm98"
+        "id": 98
     },
     {
         "question": "NAT is:",
@@ -968,7 +968,7 @@
             "a set of protocol layers designed to make data exchange possible on different types of computer networks"
         ],
         "correct": "b",
-        "id": "mcs99"
+        "id": 99
     },
     {
         "question": "Which one is not true about classless routing protocols:",
@@ -979,7 +979,7 @@
             "It is allowed to use discontiguous network"
         ],
         "correct": "a",
-        "id": "mcs100"
+        "id": 100
     },
     {
         "question": "Which one of these is a RIPv2 characteristic?",
@@ -990,7 +990,7 @@
             "does not support triggered updates or authentication of RIPv2 update messages"
         ],
         "correct": "c",
-        "id": "mcs101"
+        "id": 101
     },
     {
         "question": "Which one is true about RIPv1?",
@@ -1001,7 +1001,7 @@
             "It has the same timers as RIPv2"
         ],
         "correct": "d",
-        "id": "mcs102"
+        "id": 102
     },
     {
         "question": "An IP address is:",
@@ -1012,7 +1012,7 @@
             "32 bits"
         ],
         "correct": "d",
-        "id": "mcs103"
+        "id": 103
     },
     {
         "question": "Which of the following are valid IP addresses to mark a subnetwork?",
@@ -1023,7 +1023,7 @@
             "177.91.154/30"
         ],
         "correct": "a",
-        "id": "mcs104"
+        "id": 104
     },
     {
         "question": "What is the range of network IPs in which the following given IP resides: 194.168.19.65/28?",
@@ -1034,7 +1034,7 @@
             "194.168.19.0 - 194.168.19.64"
         ],
         "correct": "b",
-        "id": "mcs105"
+        "id": 105
     },
     {
         "question": "Which of the following is the correct host range for the subnet in which we can find the IP address 192.168.168.188 255.255.255.192?",
@@ -1045,7 +1045,7 @@
             "192.168.168.129-190"
         ],
         "correct": "d",
-        "id": "mcs106"
+        "id": 106
     },
     {
         "question": "Which protocol does DHCP use at the Transport Layer?",
@@ -1056,7 +1056,7 @@
             "ARP"
         ],
         "correct": "b",
-        "id": "mcs107"
+        "id": 107
     },
     {
         "question": "Which class of IP address has the most host addresses available by default?",
@@ -1066,7 +1066,7 @@
             "C"
         ],
         "correct": "a",
-        "id": "mcs108"
+        "id": 108
     },
     {
         "question": "Which protocol does Ping use?",
@@ -1077,7 +1077,7 @@
             "IP"
         ],
         "correct": "c",
-        "id": "mcs109"
+        "id": 109
     },
     {
         "question": "Which of the following does not use TCP?",
@@ -1088,7 +1088,7 @@
             "SMTP"
         ],
         "correct": "b",
-        "id": "mcs110"
+        "id": 110
     },
     {
         "question": "Which of the following is a private IP address?",
@@ -1099,7 +1099,7 @@
             "192.168.24.43"
         ],
         "correct": "d",
-        "id": "mcs111"
+        "id": 111
     },
     {
         "question": "Which class of IP address provides a maximum of only 254 host addresses per network ID?",
@@ -1110,7 +1110,7 @@
             "class B and C"
         ],
         "correct": "c",
-        "id": "mcs112"
+        "id": 112
     },
     {
         "question": "Which one is true about ICMP packets?",
@@ -1121,7 +1121,7 @@
             "They guarantee datagram delivery."
         ],
         "correct": "a",
-        "id": "mcs113"
+        "id": 113
     },
     {
         "question": "Which of the following is considered to be the destination host before translation?",
@@ -1132,7 +1132,7 @@
             "Outside global host"
         ],
         "correct": "b",
-        "id": "mcs114"
+        "id": 114
     },
     {
         "question": "Which of the following is considered to be the address after translation?",
@@ -1143,7 +1143,7 @@
             "Outside global host"
         ],
         "correct": "c",
-        "id": "mcs115"
+        "id": 115
     },
     {
         "question": "Which of the following is not a way to configure NAT?",
@@ -1154,7 +1154,7 @@
             "NAT overload"
         ],
         "correct": "a",
-        "id": "mcs116"
+        "id": 116
     },
     {
         "question": "Which one of the following is not an advantage of using NAT?",
@@ -1165,7 +1165,7 @@
             "Reduces address overlap occurrence"
         ],
         "correct": "b",
-        "id": "mcs117"
+        "id": 117
     },
     {
         "question": "Which one is true about NAT?",
@@ -1176,7 +1176,7 @@
             "Increases address overlap occurrence"
         ],
         "correct": "a",
-        "id": "mcs118"
+        "id": 118
     },
     {
         "question": "Which of the following is true about the IP address 10.16.3.65/23?",
@@ -1187,7 +1187,7 @@
             "The lowest host address in the subnet is 10.16.2.1 255.255.254.0"
         ],
         "correct": "d",
-        "id": "mcs119"
+        "id": 119
     },
     {
         "question": "Which of the following are valid subnet addresses?",
@@ -1198,7 +1198,7 @@
             "177.91.107.0, 177.91.107.144, 1.0.0.112"
         ],
         "correct": "d",
-        "id": "mcs120"
+        "id": 120
     },
     {
         "question": "What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?",
@@ -1209,7 +1209,7 @@
             "30"
         ],
         "correct": "d",
-        "id": "mcs121"
+        "id": 121
     },
     {
         "question": "What does a mask /28 mean?",
@@ -1220,7 +1220,7 @@
             "the maximum number of IP addresses that can be assigned to hosts is 30"
         ],
         "correct": "b",
-        "id": "mcs122"
+        "id": 122
     },
     {
         "question": "A submask /30 can be given to:",
@@ -1231,7 +1231,7 @@
             "a subnet with 2 routers connected"
         ],
         "correct": "d",
-        "id": "mcs123"
+        "id": 123
     },
     {
         "question": "You need to subnet a network that has 7 subnets, each with at least 16 hosts. Which classful subnet mask would you use?",
@@ -1242,7 +1242,7 @@
             "255.255.255.252"
         ],
         "correct": "b",
-        "id": "mcs124"
+        "id": 124
     },
     {
         "question": "You have an interface on a router with the IP address of 192.168.192.10/29. Including the router interface, how many hosts can have IP addresses on the LAN attached to the router interface?",
@@ -1253,7 +1253,7 @@
             "14"
         ],
         "correct": "a",
-        "id": "mcs125"
+        "id": 125
     },
     {
         "question": "The network address of 172.16.0.0/19 provides how many subnets and hosts?",
@@ -1264,7 +1264,7 @@
             "7 subnets, 2,046 hosts each"
         ],
         "correct": "b",
-        "id": "mcs126"
+        "id": 126
     },
     {
         "question": "Which of the following affirmations about UDP is not true?",
@@ -1275,7 +1275,7 @@
             "Not read bytes from a packet are lost"
         ],
         "correct": "c",
-        "id": "mcs127"
+        "id": 127
     },
     {
         "question": "Which one is not a principle of the OSI model?",
@@ -1286,7 +1286,7 @@
             "The function of each layer should be chosen with an eye toward defining internationally standardized protocols."
         ],
         "correct": "c",
-        "id": "mcs128"
+        "id": 128
     },
     {
         "question": "Which of the following layers controls the operation of a subnet and handles how packets are routed from source to destination?",
@@ -1297,7 +1297,7 @@
             "The Presentation Layer"
         ],
         "correct": "a",
-        "id": "mcs129"
+        "id": 129
     },
     {
         "question": "Which protocol handles mail exchange?",
@@ -1308,7 +1308,7 @@
             "SMTP"
         ],
         "correct": "d",
-        "id": "mcs130"
+        "id": 130
     },
     {
         "question": "Which one of the following is a Natural Mask?",
@@ -1319,7 +1319,7 @@
             "255.255.255.64"
         ],
         "correct": "b",
-        "id": "mcs131"
+        "id": 131
     },
     {
         "question": "IP - best effort protocol - does its best effort to transport datagram from one machine to another with no guarantee of",
@@ -1330,7 +1330,7 @@
             "All of the above"
         ],
         "correct": "d",
-        "id": "mcs132"
+        "id": 132
     },
     {
         "question": "Which affirmation is not true about The Network Address Translation?",
@@ -1341,7 +1341,7 @@
             "Devices inside the local net not explicitly addressable, visible by the outside world"
         ],
         "correct": "c",
-        "id": "mcs133"
+        "id": 133
     },
     {
         "question": "Which of the following affirmations about TCP is not true?",
@@ -1352,7 +1352,7 @@
             "Source port numbers are used to distinguish clients"
         ],
         "correct": "a",
-        "id": "mcs134"
+        "id": 134
     },
     {
         "question": "IP Routing is based on the:",
@@ -1363,7 +1363,7 @@
             "Broadcast Address"
         ],
         "correct": "b",
-        "id": "mcs135"
+        "id": 135
     },
     {
         "question": "Which is not a Service of a Data Link Layer?",
@@ -1374,7 +1374,7 @@
             "Traffic isolation"
         ],
         "correct": "d",
-        "id": "mcs136"
+        "id": 136
     },
     {
         "question": "Consider a network 60.20.30.0/24. Computers within the network have the default gateway 60.20.30.1, which is the ip of the router. The DNS server has the ip 60.20.30.2 and has the following entries in the DNS Table\ngoogle.ro 120.30.4.5\nmywebsite.ro 60.20.30.3\nA computer having the ip 60.20.30.4 opens the web browser and visits the website mywebsite.ro.\nWhat is the packet route through the network?",
@@ -1385,7 +1385,7 @@
             "60.20.30.4 -> 60.20.30.1 -> 60.20.30.2 -> 60.20.30.3 -> 60.20.30.1 -> 60.20.30.4 -> 60.20.30.2 -> 60.20.30.4"
         ],
         "correct": "d",
-        "id": "mcs137"
+        "id": 137
     },
     {
         "question": "What are the protocols involved in sending an email?",
@@ -1397,7 +1397,7 @@
             "HTTP"
         ],
         "correct": "bde",
-        "id": "mcm138"
+        "id": 138
     },
     {
         "question": "TCP stands for...",
@@ -1408,7 +1408,7 @@
             "Transmission Control Protocol"
         ],
         "correct": "d",
-        "id": "mcs139"
+        "id": 139
     },
     {
         "question": "What is a datagram?",
@@ -1419,7 +1419,7 @@
             "Millions of bytes configured in a big cluster that can be easily transferred"
         ],
         "correct": "b",
-        "id": "mcs140"
+        "id": 140
     },
     {
         "question": "ARP can be used for...",
@@ -1430,7 +1430,7 @@
             "Sending emails very fast"
         ],
         "correct": "a",
-        "id": "mcs141"
+        "id": 141
     },
     {
         "question": "TCP, UDP, and SCTP are part of...",
@@ -1441,7 +1441,7 @@
             "Link Layer"
         ],
         "correct": "c",
-        "id": "mcs142"
+        "id": 142
     },
     {
         "question": "TCP Header contains the following entries:",
@@ -1452,7 +1452,7 @@
             "Source Mac, Destination Mac, Connection object, Checksum, Data hash"
         ],
         "correct": "a",
-        "id": "mcs143"
+        "id": 143
     },
     {
         "question": "What would be a network security recommendation?",
@@ -1463,7 +1463,7 @@
             "Allow RDP connections on your computers"
         ],
         "correct": "b",
-        "id": "mcs144"
+        "id": 144
     },
     {
         "question": "What is DSL and what is it used for?",
@@ -1474,7 +1474,7 @@
             "Destination Source Limit; limits the number of packets sent and received, used for security reasons"
         ],
         "correct": "a",
-        "id": "mcs145"
+        "id": 145
     },
     {
         "question": "What is the difference between a switch and a hub?",
@@ -1485,7 +1485,7 @@
             "There is no difference"
         ],
         "correct": "b",
-        "id": "mcs146"
+        "id": 146
     },
     {
         "question": "The last address of the IP address represents?",
@@ -1496,7 +1496,7 @@
             "Multicast"
         ],
         "correct": "a",
-        "id": "mcs147"
+        "id": 147
     },
     {
         "question": "Which of the following IP addresses class is multicast?",
@@ -1507,7 +1507,7 @@
             "Class D"
         ],
         "correct": "d",
-        "id": "mcs148"
+        "id": 148
     },
     {
         "question": "Which of the following is correct regarding Class B address of IP address",
@@ -1518,7 +1518,7 @@
             "Network 12 , Host 14"
         ],
         "correct": "b",
-        "id": "mcs149"
+        "id": 149
     },
     {
         "question": "How many layers are in TCP/IP?",
@@ -1529,7 +1529,7 @@
             "5 layers"
         ],
         "correct": "b",
-        "id": "mcs150"
+        "id": 150
     },
     {
         "question": "IPv4 Address is",
@@ -1540,7 +1540,7 @@
             "32 bit"
         ],
         "correct": "d",
-        "id": "mcs151"
+        "id": 151
     },
     {
         "question": "DNS is the abbreviation for",
@@ -1551,7 +1551,7 @@
             "Dynamic Name System"
         ],
         "correct": "b",
-        "id": "mcs152"
+        "id": 152
     },
     {
         "question": "What is the size of a MAC address?",
@@ -1562,7 +1562,7 @@
             "64 bits"
         ],
         "correct": "c",
-        "id": "mcs153"
+        "id": 153
     },
     {
         "question": "MAC address is an example of?",
@@ -1573,7 +1573,7 @@
             "Physical layer"
         ],
         "correct": "b",
-        "id": "mcs154"
+        "id": 154
     },
     {
         "question": "For error detection in TCP/IP, we use?",
@@ -1584,7 +1584,7 @@
             "Error bit"
         ],
         "correct": "b",
-        "id": "mcs155"
+        "id": 155
     },
     {
         "question": "The amount of data that can be carried in a given time is called?",
@@ -1595,7 +1595,7 @@
             "Limitation"
         ],
         "correct": "c",
-        "id": "mcs156"
+        "id": 156
     },
     {
         "question": "What is the size of Host in Class B of an IP address?",
@@ -1606,7 +1606,7 @@
             "32"
         ],
         "correct": "c",
-        "id": "mcs157"
+        "id": 157
     },
     {
         "question": "What is the use of the ping command?",
@@ -1617,7 +1617,7 @@
             "To get your IP address"
         ],
         "correct": "b",
-        "id": "mcs158"
+        "id": 158
     },
     {
         "question": "What is a normal mask for a Class C network?",
@@ -1628,7 +1628,7 @@
             "255.255.255.0"
         ],
         "correct": "d",
-        "id": "mcs159"
+        "id": 159
     },
     {
         "question": "What does a protocol define?",
@@ -1639,7 +1639,7 @@
             "None of the above"
         ],
         "correct": "abc",
-        "id": "mcm160"
+        "id": 160
     },
     {
         "question": "What is the use of Subnetting?",
@@ -1650,7 +1650,7 @@
             "All of the above"
         ],
         "correct": "a",
-        "id": "mcs161"
+        "id": 161
     },
     {
         "question": "What is TTL?",
@@ -1661,7 +1661,7 @@
             "Time Tracking Limit"
         ],
         "correct": "c",
-        "id": "mcs162"
+        "id": 162
     },
     {
         "question": "The following system calls are/is optional at the level of a TCP client:",
@@ -1672,7 +1672,7 @@
             "connect()"
         ],
         "correct": "c",
-        "id": "mcs163"
+        "id": 163
     },
     {
         "question": "Which one/ones of the following addresses have to be identical for all computers located in the same local network?",
@@ -1683,7 +1683,7 @@
             "MAC address"
         ],
         "correct": "ab",
-        "id": "mcm164"
+        "id": 164
     },
     {
         "question": "What does the ARP protocol help with?",
@@ -1693,7 +1693,7 @@
             "Determining the IP address when the DNS server is known"
         ],
         "correct": "b",
-        "id": "mcs165"
+        "id": 165
     },
     {
         "question": "DHCP is a client/server protocol that automatically provides an Internet Protocol host with its:",
@@ -1704,7 +1704,7 @@
             "Default gateway"
         ],
         "correct": "abd",
-        "id": "mcm166"
+        "id": 166
     },
     {
         "question": "The maximum number of hosts a network with the netmask 255.255.255.224 is capable of supporting is:",
@@ -1715,7 +1715,7 @@
             "16"
         ],
         "correct": "c",
-        "id": "mcs167"
+        "id": 167
     },
     {
         "question": "The natural mask for a class A address is:",
@@ -1726,7 +1726,7 @@
             "255.255.0.0"
         ],
         "correct": "c",
-        "id": "mcs168"
+        "id": 168
     },
     {
         "question": "Consider the following netmask: 255.255.0.0, the network part (network length) is formed by a number of bits equal to:",
@@ -1737,7 +1737,7 @@
             "Impossible to determine"
         ],
         "correct": "b",
-        "id": "mcs169"
+        "id": 169
     },
     {
         "question": "Which of the following describes 'big endian'?",
@@ -1748,7 +1748,7 @@
             "Most significant byte in the middle"
         ],
         "correct": "a",
-        "id": "mcs170"
+        "id": 170
     },
     {
         "question": "Which of the following describes 'little endian'?",
@@ -1759,7 +1759,7 @@
             "Most significant byte in the middle"
         ],
         "correct": "a",
-        "id": "mcs171"
+        "id": 171
     },
     {
         "question": "What is the in-memory representation of 56E2 in little endian?",
@@ -1770,7 +1770,7 @@
             "652E"
         ],
         "correct": "b",
-        "id": "mcs172"
+        "id": 172
     },
     {
         "question": "What is the in-memory representation of 56E2 in big endian?",
@@ -1781,7 +1781,7 @@
             "652E"
         ],
         "correct": "a",
-        "id": "mcs173"
+        "id": 173
     },
     {
         "question": "How many bytes does 'double' use?",
@@ -1792,7 +1792,7 @@
             "16 bytes"
         ],
         "correct": "c",
-        "id": "mcs174"
+        "id": 174
     },
     {
         "question": "How many bytes does 'float' use?",
@@ -1803,7 +1803,7 @@
             "16 bytes"
         ],
         "correct": "b",
-        "id": "mcs175"
+        "id": 175
     },
     {
         "question": "What does TCP/IP stand for?",
@@ -1814,7 +1814,7 @@
             "Transmission Control Protocol/Internet Protocol"
         ],
         "correct": "d",
-        "id": "mcs176"
+        "id": 176
     },
     {
         "question": "What type of connection does SOCK_STREAM indicate?",
@@ -1825,7 +1825,7 @@
             "Open connection"
         ],
         "correct": "a",
-        "id": "mcs177"
+        "id": 177
     },
     {
         "question": "What type of connection does SOCK_DGRAM indicate?",
@@ -1836,7 +1836,7 @@
             "Open connection"
         ],
         "correct": "b",
-        "id": "mcs178"
+        "id": 178
     },
     {
         "question": "What does DNS stand for?",
@@ -1847,7 +1847,7 @@
             "Domain Name System"
         ],
         "correct": "d",
-        "id": "mcs179"
+        "id": 179
     },
     {
         "question": "How many different network layers are there (according to the OSI Reference Model)?",
@@ -1858,7 +1858,7 @@
             "9 layers"
         ],
         "correct": "a",
-        "id": "mcs180"
+        "id": 180
     },
     {
         "question": "The 4 bottom network layers (according to the OSI Reference Model), in order, are the following:",
@@ -1869,7 +1869,7 @@
             "Data link, Physical, Network, Transport"
         ],
         "correct": "a",
-        "id": "mcs181"
+        "id": 181
     },
     {
         "question": "What does FTP stand for?",
@@ -1880,7 +1880,7 @@
             "Folder Transmission Protocol"
         ],
         "correct": "b",
-        "id": "mcs182"
+        "id": 182
     },
     {
         "question": "What is FTP used for?",
@@ -1891,7 +1891,7 @@
             "Accessing the WEB, sending HTML pages."
         ],
         "correct": "b",
-        "id": "mcs183"
+        "id": 183
     },
     {
         "question": "What does SSH stand for?",
@@ -1902,7 +1902,7 @@
             "Structured Shell"
         ],
         "correct": "c",
-        "id": "mcs184"
+        "id": 184
     },
     {
         "question": "What is SSH used for?",
@@ -1913,7 +1913,7 @@
             "Accessing the WEB, sending HTML pages."
         ],
         "correct": "a",
-        "id": "mcs185"
+        "id": 185
     },
     {
         "question": "What is SMTP used for?",
@@ -1924,7 +1924,7 @@
             "Accessing the WEB, sending HTML pages."
         ],
         "correct": "c",
-        "id": "mcs186"
+        "id": 186
     },
     {
         "question": "What does P2P stand for?",
@@ -1935,7 +1935,7 @@
             "Peer to Point."
         ],
         "correct": "a",
-        "id": "mcs187"
+        "id": 187
     },
     {
         "question": "What is the maximum bandwidth, the maximum amount of data that the optical fiber can carry?",
@@ -1946,7 +1946,7 @@
             "There is no maximum."
         ],
         "correct": "d",
-        "id": "mcs188"
+        "id": 188
     },
     {
         "question": "Since optical fiber has no limit in bandwidth, what is a plausible reason for your lower internet speed?",
@@ -1958,7 +1958,7 @@
             "All answers are correct."
         ],
         "correct": "e",
-        "id": "mcs189"
+        "id": 189
     },
     {
         "question": "If I have a zip of size 1024 bytes and a connection of 32 bits/second to the computer I want to send the zip to, how long would it take for the zip to be sent?",
@@ -1970,7 +1970,7 @@
             "256 seconds"
         ],
         "correct": "e",
-        "id": "mcs190"
+        "id": 190
     },
     {
         "question": "What kind of signal flows through the optical fiber cable?",
@@ -1981,7 +1981,7 @@
             "Electric current"
         ],
         "correct": "b",
-        "id": "mcs191"
+        "id": 191
     },
     {
         "question": "What type of physical signal does wireless transmission use?",
@@ -1992,7 +1992,7 @@
             "Electric current"
         ],
         "correct": "a",
-        "id": "mcs192"
+        "id": 192
     },
     {
         "question": "How long is an IPv4 address?",
@@ -2003,7 +2003,7 @@
             "8 bytes"
         ],
         "correct": "a",
-        "id": "mcs193"
+        "id": 193
     },
     {
         "question": "What does TLD stand for?",
@@ -2014,7 +2014,7 @@
             "Top Level Distribution"
         ],
         "correct": "c",
-        "id": "mcs194"
+        "id": 194
     },
     {
         "question": "What does ISP stand for?",
@@ -2025,7 +2025,7 @@
             "Internet Server Provider"
         ],
         "correct": "c",
-        "id": "mcs195"
+        "id": 195
     },
     {
         "question": "Which of the following is a valid domain name?",
@@ -2036,7 +2036,7 @@
             "All answers are correct"
         ],
         "correct": "d",
-        "id": "mcs196"
+        "id": 196
     },
     {
         "question": "What does ROTLD stand for?",
@@ -2047,7 +2047,7 @@
             "Romanian Top Level Distribution"
         ],
         "correct": "a",
-        "id": "mcs197"
+        "id": 197
     },
     {
         "question": "What is the 'Whois Query' used for?",
@@ -2058,7 +2058,7 @@
             "Getting the IP of a domain name."
         ],
         "correct": "a",
-        "id": "mcs198"
+        "id": 198
     },
     {
         "question": "Which of the following represents an FTP (File Transfer Protocol)?",
@@ -2069,7 +2069,7 @@
             "The SMTP"
         ],
         "correct": "b",
-        "id": "mcs199"
+        "id": 199
     },
     {
         "question": "What is HTML?",
@@ -2080,7 +2080,7 @@
             "All of the above are true."
         ],
         "correct": "a",
-        "id": "mcs200"
+        "id": 200
     },
     {
         "question": "Which of the following is a correct mac address?",
@@ -2091,7 +2091,7 @@
             "12-34-56-78-90-AB"
         ],
         "correct": "d",
-        "id": "mcs201"
+        "id": 201
     },
     {
         "question": "What command would you use to find your network adapter's mac address if you are on Windows?",
@@ -2102,7 +2102,7 @@
             "All of the above would work."
         ],
         "correct": "c",
-        "id": "mcs202"
+        "id": 202
     },
     {
         "question": "What does ARP stand for?",
@@ -2113,7 +2113,7 @@
             "Address Read Protocol"
         ],
         "correct": "a",
-        "id": "mcs203"
+        "id": 203
     },
     {
         "question": "What does LAN stand for?",
@@ -2124,7 +2124,7 @@
             "Local Area Name"
         ],
         "correct": "c",
-        "id": "mcs204"
+        "id": 204
     },
     {
         "question": "What command would you use to test the Datalink Layer to see if it works (on Windows)?",
@@ -2136,7 +2136,7 @@
             "All answers are correct."
         ],
         "correct": "a",
-        "id": "mcs205"
+        "id": 205
     },
     {
         "question": "Which of the following IP sets belong to 209.220.186.12/255.255.255.252 ip class?",
@@ -2147,7 +2147,7 @@
             "209.220.186.10, 209.220.186.11, 209.220.186.12, 209.220.186.13, 209.220.186.14, 209.220.186.15, 209.220.186.16, 209.220.186.17"
         ],
         "correct": "a",
-        "id": "mcs206"
+        "id": 206
     },
     {
         "question": "How many bits of zero does the following netmask have? 255.255.255.248",
@@ -2158,7 +2158,7 @@
             "8 bits"
         ],
         "correct": "b",
-        "id": "mcs207"
+        "id": 207
     },
     {
         "question": "Which is the correct binary representation of the following netmask? 255.255.255.128",
@@ -2169,7 +2169,7 @@
             "11111111 11111111 11111111 00000000"
         ],
         "correct": "a",
-        "id": "mcs208"
+        "id": 208
     },
     {
         "question": "What is the netmask for the following IP class? 192.168.0.0/24",
@@ -2181,7 +2181,7 @@
             "All netmasks are correct."
         ],
         "correct": "b",
-        "id": "mcs209"
+        "id": 209
     },
     {
         "question": "What is the netmask for the following IP class? 10.10.0.0/17",
@@ -2193,7 +2193,7 @@
             "All netmasks are correct."
         ],
         "correct": "c",
-        "id": "mcs210"
+        "id": 210
     },
     {
         "question": "How do you find the network address if you have the network mask and one random IP address in the network?",
@@ -2204,7 +2204,7 @@
             "You 'xor' the netmask and the random IP"
         ],
         "correct": "a",
-        "id": "mcs211"
+        "id": 211
     },
     {
         "question": "What will you get if you 'or' together the netmaks of a network and one random IP in the network?",
@@ -2215,7 +2215,7 @@
             "Nothing significant."
         ],
         "correct": "d",
-        "id": "mcs212"
+        "id": 212
     },
     {
         "question": "What does NAT stand for?",
@@ -2227,7 +2227,7 @@
             "Name Area Translocation"
         ],
         "correct": "a",
-        "id": "mcs213"
+        "id": 213
     },
     {
         "question": "Which of the following involve NAT?",
@@ -2237,7 +2237,7 @@
             "Both answers involve NAT."
         ],
         "correct": "c",
-        "id": "mcs214"
+        "id": 214
     },
     {
         "question": "Are MAC addresses guaranteed to be unique?",
@@ -2248,7 +2248,7 @@
             "Yes, because MAC addresses are burned into the ROM of the network adapter."
         ],
         "correct": "d",
-        "id": "mcs215"
+        "id": 215
     },
     {
         "question": "What is a private IP address?",
@@ -2259,7 +2259,7 @@
             "It's an IP address that has the following form: 127.0.x.x."
         ],
         "correct": "b",
-        "id": "mcs216"
+        "id": 216
     },
     {
         "question": "Which is the range for an IP address of class B?",
@@ -2270,7 +2270,7 @@
             "128-192"
         ],
         "correct": "c",
-        "id": "mcs217"
+        "id": 217
     },
     {
         "question": "What is the broadcast address of the following IP address 221.17.123.9 that has in its network 42 computers?",
@@ -2281,7 +2281,7 @@
             "221.17.123.65"
         ],
         "correct": "c",
-        "id": "mcs218"
+        "id": 218
     },
     {
         "question": "What is the use of the ARP protocol?",
@@ -2292,7 +2292,7 @@
             "To determine the MAC address when we know the default gateway."
         ],
         "correct": "b",
-        "id": "mcs219"
+        "id": 219
     },
     {
         "question": "What does UDP stand for?",
@@ -2303,7 +2303,7 @@
             "Undefined Destination Packets"
         ],
         "correct": "a",
-        "id": "mcs220"
+        "id": 220
     },
     {
         "question": "What is the subdomain for the top level domain for the following DNS address: \"linux.scs.ubbcluj.ro\"?",
@@ -2314,7 +2314,7 @@
             "\"ro\""
         ],
         "correct": "c",
-        "id": "mcs221"
+        "id": 221
     },
     {
         "question": "Which is the difference between bandwidth and throughput?",
@@ -2324,7 +2324,7 @@
             "The bandwidth represents the amount of data which we transmit, while throughput is the physical property of the transmission medium."
         ],
         "correct": "a",
-        "id": "mcs222"
+        "id": 222
     },
     {
         "question": "What is a broadcast MAC address?",
@@ -2334,7 +2334,7 @@
             "It's a logical identifier for a group of hosts in a computer network that are available to process data-grams."
         ],
         "correct": "b",
-        "id": "mcs223"
+        "id": 223
     },
     {
         "question": "In how many subclasses with the netmask 255.192.0.0 can the class of minimal dimension containing both IP addresses: 78.79.80.81 and 79.80.81.82, be divided?",
@@ -2345,7 +2345,7 @@
             "9"
         ],
         "correct": "c",
-        "id": "mcs224"
+        "id": 224
     },
     {
         "question": "Which are the layers of the TCP/IP model?",
@@ -2356,7 +2356,7 @@
             "Application layer, internet layer."
         ],
         "correct": "b",
-        "id": "mcs225"
+        "id": 225
     },
     {
         "question": "Which of the following does not describe a socket?",
@@ -2366,7 +2366,7 @@
             "A process that sends and receives data at a single node in a computer."
         ],
         "correct": "c",
-        "id": "mcs226"
+        "id": 226
     },
     {
         "question": "How do we obtain the starting address of a network from a given IP?",
@@ -2376,7 +2376,7 @@
             "AND logic between IP given and netmask"
         ],
         "correct": "c",
-        "id": "mcs227"
+        "id": 227
     },
     {
         "question": "Which is the order of the five-layer Internet protocol stack?",
@@ -2386,7 +2386,7 @@
             "Application, Transport, Link, Network, Physical"
         ],
         "correct": "a",
-        "id": "mcs228"
+        "id": 228
     },
     {
         "question": "UDP vs. TCP flow control: Which question is false?",
@@ -2396,7 +2396,7 @@
             "TCP: one part can overflow but there are no lost packets"
         ],
         "correct": "c",
-        "id": "mcs229"
+        "id": 229
     },
     {
         "question": "What is the length of the TCP header?",
@@ -2406,7 +2406,7 @@
             "20"
         ],
         "correct": "c",
-        "id": "mcs230"
+        "id": 230
     },
     {
         "question": "What does a routing table contain?",
@@ -2416,7 +2416,7 @@
             "Source address, destination address, netmask, gateway"
         ],
         "correct": "b",
-        "id": "mcs231"
+        "id": 231
     },
     {
         "question": "What is Throughput?",
@@ -2426,7 +2426,7 @@
             "The capacity of data transportation that we send through a transmission channel"
         ],
         "correct": "b",
-        "id": "mcs232"
+        "id": 232
     },
     {
         "question": "What does traceroute?",
@@ -2436,7 +2436,7 @@
             "Shows the IP route of the last 5 parsed"
         ],
         "correct": "a",
-        "id": "mcs233"
+        "id": 233
     },
     {
         "question": "What is a congestion window?",
@@ -2446,7 +2446,7 @@
             "A window that controls flow moving of the sender"
         ],
         "correct": "a",
-        "id": "mcs234"
+        "id": 234
     },
     {
         "question": "Which of these addresses is not private?",
@@ -2456,7 +2456,7 @@
             "192.168.255.255"
         ],
         "correct": "b",
-        "id": "mcs235"
+        "id": 235
     },
     {
         "question": "What is checksum?",
@@ -2466,7 +2466,7 @@
             "Is a 16-bit flag used for error checking of the header and data"
         ],
         "correct": "a",
-        "id": "mcs236"
+        "id": 236
     },
     {
         "question": "Which of the addresses is a valid private address?",
@@ -2476,7 +2476,7 @@
             "193.168.0.0/29"
         ],
         "correct": "b",
-        "id": "mcs237"
+        "id": 237
     },
     {
         "question": "Which is the third level in the OSI Reference Model Layer?",
@@ -2486,7 +2486,7 @@
             "Transport"
         ],
         "correct": "a",
-        "id": "mcs238"
+        "id": 238
     },
     {
         "question": "Which is the network address of the second subnet of a network having 93 computers, where the first contains 22 computers, and starts from 192.168.0.0?",
@@ -2496,7 +2496,7 @@
             "192.168.0.24"
         ],
         "correct": "b",
-        "id": "mcs239"
+        "id": 239
     },
     {
         "question": "The natural mask for a class B address is:",
@@ -2506,7 +2506,7 @@
             "255.255.255.0"
         ],
         "correct": "b",
-        "id": "mcs240"
+        "id": 240
     },
     {
         "question": "What is a property of a computer network?",
@@ -2517,7 +2517,7 @@
             "it has only PCs and workstations."
         ],
         "correct": "b",
-        "id": "mcs241"
+        "id": 241
     },
     {
         "question": "Which of the following is NOT a computer network?",
@@ -2528,7 +2528,7 @@
             "Telephone system."
         ],
         "correct": "c",
-        "id": "mcs242"
+        "id": 242
     },
     {
         "question": "If AB12 is represented in big endian as AB12, what is its representation in little endian?",
@@ -2539,7 +2539,7 @@
             "12AB"
         ],
         "correct": "d",
-        "id": "mcs243"
+        "id": 243
     },
     {
         "question": "If 43ED is represented in big endian as 43ED, what is its representation in little endian?",
@@ -2550,7 +2550,7 @@
             "ED34"
         ],
         "correct": "b",
-        "id": "mcs244"
+        "id": 244
     },
     {
         "question": "What function call you don't find in a UDP server?",
@@ -2561,7 +2561,7 @@
             "accept"
         ],
         "correct": "d",
-        "id": "mcs245"
+        "id": 245
     },
     {
         "question": "What happens with the bytes that are not read by a TCP server?",
@@ -2572,7 +2572,7 @@
             "Are transferred to a special location in the network."
         ],
         "correct": "c",
-        "id": "mcs246"
+        "id": 246
     },
     {
         "question": "How many bits have an IP address?",
@@ -2583,7 +2583,7 @@
             "16"
         ],
         "correct": "b",
-        "id": "mcs247"
+        "id": 247
     },
     {
         "question": "Which of the following is NOT a valid IP netmask combination?",
@@ -2594,7 +2594,7 @@
             "168.220.186.64/255.255.255.240"
         ],
         "correct": "c",
-        "id": "mcs248"
+        "id": 248
     },
     {
         "question": "When you have an IP address and the network mask what operation you need to do in order to find out the network address?",
@@ -2605,7 +2605,7 @@
             "you can't find the network address."
         ],
         "correct": "b",
-        "id": "mcs249"
+        "id": 249
     },
     {
         "question": "Which of the following is NOT a valid IP netmask combination?",
@@ -2616,7 +2616,7 @@
             "168.220.186.8/255.255.255.240"
         ],
         "correct": "d",
-        "id": "mcs250"
+        "id": 250
     },
     {
         "question": "Which of the following is a class C IP address?",
@@ -2627,7 +2627,7 @@
             "204.67.118.54"
         ],
         "correct": "d",
-        "id": "mcs251"
+        "id": 251
     },
     {
         "question": "UDP packets are encapsulated in:",
@@ -2638,7 +2638,7 @@
             "none of the above"
         ],
         "correct": "c",
-        "id": "mcs252"
+        "id": 252
     },
     {
         "question": "Which of the following functions does UDP perform?",
@@ -2649,7 +2649,7 @@
             "protect the data sent against any corruption while transferring it."
         ],
         "correct": "ab",
-        "id": "mcm253"
+        "id": 253
     },
     {
         "question": "Which of the following is not an application layer protocol?",
@@ -2660,7 +2660,7 @@
             "TCP"
         ],
         "correct": "d",
-        "id": "mcs254"
+        "id": 254
     },
     {
         "question": "A one-to-all communication between one source and all hosts on a network can be classified as:",
@@ -2671,7 +2671,7 @@
             "anycast communication"
         ],
         "correct": "b",
-        "id": "mcs255"
+        "id": 255
     },
     {
         "question": "The data link layer takes packets from .............. and encapsulates them into frames for transmission",
@@ -2682,7 +2682,7 @@
             "application layer"
         ],
         "correct": "a",
-        "id": "mcs256"
+        "id": 256
     },
     {
         "question": "FTP uses the following channels:",
@@ -2693,7 +2693,7 @@
             "the data channel"
         ],
         "correct": "bd",
-        "id": "mcm257"
+        "id": 257
     },
     {
         "question": "Which IP address class can have 64 000 subnets with 64 000 hosts/subnet?",
@@ -2704,7 +2704,7 @@
             "class D"
         ],
         "correct": "b",
-        "id": "mcs258"
+        "id": 258
     },
     {
         "question": "Which can be an Ethernet physical address?",
@@ -2715,7 +2715,7 @@
             "none of the above"
         ],
         "correct": "a",
-        "id": "mcs259"
+        "id": 259
     },
     {
         "question": "The underlying transport layer protocol used by SMTP:",
@@ -2726,7 +2726,7 @@
             "none of the above"
         ],
         "correct": "a",
-        "id": "mcs260"
+        "id": 260
     },
     {
         "question": "In HTTP Protocol, a client can directly connect to a server using:",
@@ -2737,7 +2737,7 @@
             "HTTP"
         ],
         "correct": "c",
-        "id": "mcs261"
+        "id": 261
     },
     {
         "question": "The last network address is reserved for: ",
@@ -2748,7 +2748,7 @@
             "anycasting"
         ],
         "correct": "a",
-        "id": "mcs262"
+        "id": 262
     },
     {
         "question": "The size of a class C IP Adresses per network is ",
@@ -2759,7 +2759,7 @@
             "32"
         ],
         "correct": "b",
-        "id": "mcs263"
+        "id": 263
     },
     {
         "question": "DHCP stands for ",
@@ -2770,13 +2770,13 @@
             "Dynamic Host Configuration Protocol"
         ],
         "correct": "d",
-        "id": "mcs264"
+        "id": 264
     },
     {
         "question": "The network address of the third subnet of a network having 93 computers that starts from 192.168.0.0, where the first contains 22 computers and the second has 10 hosts is",
         "answers": [],
         "correct": "192.168.0.48",
-        "id": "fr265"
+        "id": 265
     },
     {
         "question": "The networks can be classified on the types of transmission as .......... switching and .......... switching.",
@@ -2787,7 +2787,7 @@
             "packet, circus"
         ],
         "correct": "a",
-        "id": "mcs266"
+        "id": 266
     },
     {
         "question": "UDP guarantees datagram delivery:",
@@ -2796,7 +2796,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs267"
+        "id": 267
     },
     {
         "question": "The socket type used by TCP is SOCK_STREAM:",
@@ -2805,7 +2805,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs268"
+        "id": 268
     },
     {
         "question": "With UDP, one party can overflow the other => lost packets:",
@@ -2814,7 +2814,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs269"
+        "id": 269
     },
     {
         "question": "The connect system call is normally called by the client process in order to connect to a server process:",
@@ -2823,7 +2823,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs270"
+        "id": 270
     },
     {
         "question": "The listen system call indicates to the protocol that the client process is ready to accept new incoming connections on the socket:",
@@ -2832,7 +2832,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs271"
+        "id": 271
     },
     {
         "question": "At the level of a TCP client, the bind system call is mandatory:",
@@ -2841,7 +2841,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs272"
+        "id": 272
     },
     {
         "question": "The high order bits of an IP Address represent the host part:",
@@ -2850,7 +2850,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs273"
+        "id": 273
     },
     {
         "question": "All the hosts from the same network can physically reach each other without an intervening router:",
@@ -2859,7 +2859,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs274"
+        "id": 274
     },
     {
         "question": "A network address can be determined based on an IP Address from the network and the netmask:",
@@ -2868,7 +2868,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs275"
+        "id": 275
     },
     {
         "question": "Always, in a class of addresses, the first and last IP addresses are reserved:",
@@ -2877,7 +2877,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs276"
+        "id": 276
     },
     {
         "question": "For connecting a host with a private address to the Internet, it has to be translated to a public address, process named ARP:",
@@ -2886,7 +2886,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs277"
+        "id": 277
     },
     {
         "question": "172.16.0.0/12 refers to a private address space:",
@@ -2895,7 +2895,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs278"
+        "id": 278
     },
     {
         "question": "A DNS server is responsible for translating domain names to numerical IP addresses:",
@@ -2904,7 +2904,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs279"
+        "id": 279
     },
     {
         "question": "The network address can be obtained from an IP address and the netmask using the logical operation 'OR':",
@@ -2913,7 +2913,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs280"
+        "id": 280
     },
     {
         "question": "When NAT is involved, the local network uses just one IP address as far as the outside world is concerned:",
@@ -2922,7 +2922,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs281"
+        "id": 281
     },
     {
         "question": "The number of IP addresses allocated for each subnet block has to be a power of 4:",
@@ -2931,7 +2931,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs282"
+        "id": 282
     },
     {
         "question": "209.220.186.8/255.255.255.248 is an invalid IP/Netmask combination:",
@@ -2940,7 +2940,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs283"
+        "id": 283
     },
     {
         "question": "The default gateway serves as an access point or IP router that a networked computer uses to send information to a computer in the same network or the Internet:",
@@ -2949,7 +2949,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs284"
+        "id": 284
     },
     {
         "question": "A 255.255.255.240 netmask is capable of supporting 16 hosts:",
@@ -2958,7 +2958,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs285"
+        "id": 285
     },
     {
         "question": "A computer uses HTTP to look up domain names and get the associated IP address:",
@@ -2967,7 +2967,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs286"
+        "id": 286
     },
     {
         "question": "There is no routing based on MAC addresses:",
@@ -2976,7 +2976,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs287"
+        "id": 287
     },
     {
         "question": "A proxy server acts as an intermediary for requests from clients seeking resources from other servers:",
@@ -2985,7 +2985,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs288"
+        "id": 288
     },
     {
         "question": "The combination DNS server = Default Gateway is not possible:",
@@ -2994,7 +2994,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs289"
+        "id": 289
     },
     {
         "question": "A collection of computers (PCs, Workstations) and other devices interconnected represent a computer network.",
@@ -3003,7 +3003,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs290"
+        "id": 290
     },
     {
         "question": "Hosts (computers), links (coaxial cable, twisted pair, optical fiber, radio, satellite), switches/routers (intermediate systems) are all components of a computer system.",
@@ -3012,7 +3012,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs291"
+        "id": 291
     },
     {
         "question": "Big Endian means 'most significant byte first' while little endian means 'least significant byte first.",
@@ -3021,7 +3021,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs292"
+        "id": 292
     },
     {
         "question": "SOCK_STREAM is used for UDP connections.",
@@ -3030,7 +3030,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs293"
+        "id": 293
     },
     {
         "question": "SOCK_DGRAM is used for UDP connections.",
@@ -3039,7 +3039,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs294"
+        "id": 294
     },
     {
         "question": "The optical fiber cable theoretically has unlimited bandwidth.",
@@ -3048,7 +3048,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs295"
+        "id": 295
     },
     {
         "question": "Every domain name that is not already in use is free to claim as your own.",
@@ -3057,7 +3057,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs296"
+        "id": 296
     },
     {
         "question": "255.255.255.128 starts with 1 zero and ends with 7 zeroes.",
@@ -3066,7 +3066,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs297"
+        "id": 297
     },
     {
         "question": "255.255.255.128 ends with 7 zeroes.",
@@ -3075,7 +3075,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs298"
+        "id": 298
     },
     {
         "question": "Port forwarding is a use of NAT.",
@@ -3084,7 +3084,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs299"
+        "id": 299
     },
     {
         "question": "Mac addresses are not guaranteed to be unique.",
@@ -3093,7 +3093,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs300"
+        "id": 300
     },
     {
         "question": "The netmask can't be determined using an IP address and the broadcast address",
@@ -3102,7 +3102,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs301"
+        "id": 301
     },
     {
         "question": "A web server can run on ports different than 80",
@@ -3111,7 +3111,7 @@
             "False"
         ],
         "correct": "a",
-        "id": "mcs302"
+        "id": 302
     },
     {
         "question": "11111111.11111111.11111100.00000000 = 255.255.254.0",
@@ -3120,7 +3120,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs303"
+        "id": 303
     },
     {
         "question": "255.255.128.0 = /23",
@@ -3129,7 +3129,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs304"
+        "id": 304
     },
     {
         "question": "The broadcast address cannot be calculated using the IP address and the netmask",
@@ -3138,7 +3138,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs305"
+        "id": 305
     },
     {
         "question": "TCP, UDP are part of",
@@ -3149,7 +3149,7 @@
             "Internet Layer"
         ],
         "correct": "a",
-        "id": "mcs306"
+        "id": 306
     },
     {
         "question": "TCP Header contains the following entries:",
@@ -3160,7 +3160,7 @@
             "Source Port, Destination Port, Sequence Number, Acknowledgement Number, Flags, Data Offset, Checksum, Urgent Pointer"
         ],
         "correct": "d",
-        "id": "mcs307"
+        "id": 307
     },
     {
         "question": "The network address cannot be calculated using the broadcast address and the netmask",
@@ -3169,7 +3169,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs308"
+        "id": 308
     },
     {
         "question": "bind() cannot be used in UDP clients",
@@ -3178,7 +3178,7 @@
             "False"
         ],
         "correct": "b",
-        "id": "mcs309"
+        "id": 309
     },
     {
         "question": "Internet API is a set of rules that the sending program must follow so that the Internet can deliver the data to the destination program.",
@@ -3187,7 +3187,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf310"
+        "id": 310
     },
     {
         "question": "UDP is used together with IP when small amounts of information are involved, but it uses more system resources than TCP.",
@@ -3197,7 +3197,7 @@
         ],
         "correction": "Correct: UDP is used together with IP when small amounts of information are involved, but it uses fewer system resources than TCP.",
         "correct": "b",
-        "id": "tf311"
+        "id": 311
     },
     {
         "question": "When configuring email clients, an Internet address for an SMTP server must be entered.",
@@ -3206,7 +3206,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf312"
+        "id": 312
     },
     {
         "question": "File Transfer Protocol (FTP) provides the transmission in encrypted form to provide security for sensitive data.",
@@ -3216,7 +3216,7 @@
         ],
         "correction": "Correct: File Transfer Protocol (FTP) provides a method for copying files over a network from one computer to another.",
         "correct": "b",
-        "id": "tf313"
+        "id": 313
     },
     {
         "question": "The Open System Interconnection (OSI) model defines a networking framework to implement protocols in layers, with control passed from one layer to the next.",
@@ -3225,7 +3225,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf314"
+        "id": 314
     },
     {
         "question": "The Transport Layer manages the mapping between these logical addresses and physical addresses. In IP networking, this mapping is accomplished through the Address Resolution Protocol (ARP).",
@@ -3235,7 +3235,7 @@
         ],
         "correction": "Correct: The Network Layer manages the mapping between these logical addresses and physical addresses. In IP networking, this mapping is accomplished through the Resolution Protocol (ARP).",
         "correct": "b",
-        "id": "tf315"
+        "id": 315
     },
     {
         "question": "The maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask is 40.",
@@ -3245,7 +3245,7 @@
         ],
         "correction": "Correct: 255.255.255.224 is a class A/27 and its last 5 bits are zero => provides 8 subnets, each with 30 hosts.",
         "correct": "b",
-        "id": "tf316"
+        "id": 316
     },
     {
         "question": "The subnetwork address of a host with an IP address of 172.16.66.0/21 is 172.16.64.0.",
@@ -3254,7 +3254,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf317"
+        "id": 317
     },
     {
         "question": "To test the IP stack on your local host, you would ping the IP address 127.0.0.0.",
@@ -3264,7 +3264,7 @@
         ],
         "correction": "Correct: 127.0.0.1",
         "correct": "b",
-        "id": "tf318"
+        "id": 318
     },
     {
         "question": "A switch does not keep a record of the MAC addresses of the devices connected to it.",
@@ -3274,7 +3274,7 @@
         ],
         "correction": "Correct: A switch keeps a record of the MAC addresses of all the devices connected to it.",
         "correct": "b",
-        "id": "tf319"
+        "id": 319
     },
     {
         "question": "The UDP \u2026 identifies the destination port and a reply port.",
@@ -3285,7 +3285,7 @@
             "datagram"
         ],
         "correct": "a",
-        "id": "mcs320"
+        "id": 320
     },
     {
         "question": "TCP/IP allows a packet to be sent without waiting for the \u2026 of the previous packet.",
@@ -3296,7 +3296,7 @@
             "acceptance"
         ],
         "correct": "b",
-        "id": "mcs321"
+        "id": 321
     },
     {
         "question": "A 10/100 Mbps hub must share its \u2026 with each and every one of its ports.",
@@ -3307,7 +3307,7 @@
             "throughput"
         ],
         "correct": "c",
-        "id": "mcs322"
+        "id": 322
     },
     {
         "question": "A router is typically connected to at least two networks, commonly two \u2026 or \u2026 or a LAN and its ISP\u2019S network.",
@@ -3316,7 +3316,7 @@
             "VIRTUAL PRIVATE NETWORKS(VPNs), METROPOLITAN AREA NETWORKS(MANs)"
         ],
         "correct": "a",
-        "id": "mcs323"
+        "id": 323
     },
     {
         "question": "\u2026 is a Computer Network diagnostic tool for displaying the route (path) and measuring transit delays of packets across an (IP) network.",
@@ -3327,7 +3327,7 @@
             "nslookup"
         ],
         "correct": "b",
-        "id": "mcs324"
+        "id": 324
     },
     {
         "question": "A \u2026 defines the format and the order of messages exchanged between two or more communicating entities.",
@@ -3338,7 +3338,7 @@
             "socket"
         ],
         "correct": "a",
-        "id": "mcs325"
+        "id": 325
     },
     {
         "question": "The TCP/IP \u2026 is used to detect corruption of data over a TCP or IPv4 connection.",
@@ -3349,7 +3349,7 @@
             "datagram"
         ],
         "correct": "c",
-        "id": "mcs326"
+        "id": 326
     },
     {
         "question": "\u2026 in a network may occur when the load on the network is greater than the capacity of the network.",
@@ -3360,7 +3360,7 @@
             "duplication"
         ],
         "correct": "a",
-        "id": "mcs327"
+        "id": 327
     },
     {
         "question": "HTTP Protocol allows exchange of \u2026 and \u2026 .",
@@ -3370,7 +3370,7 @@
             "csv, xml"
         ],
         "correct": "a",
-        "id": "mcs328"
+        "id": 328
     },
     {
         "question": "Address Resolution Protocol (ARP) is a protocol for mapping an \u2026 to a \u2026 that is recognized in the local network.",
@@ -3379,7 +3379,7 @@
             "MAC ADDRESS, IP ADDRESS"
         ],
         "correct": "a",
-        "id": "mcs329"
+        "id": 329
     },
     {
         "question": "With UDP, one party can overflow the other, which results in lost packets.",
@@ -3388,7 +3388,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf330"
+        "id": 330
     },
     {
         "question": "Always, in a class of addressed, the first and last IP addresses are reserve.",
@@ -3397,7 +3397,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf331"
+        "id": 331
     },
     {
         "question": "A DNS server is responsible with translating numerical IP addresses to domain names.",
@@ -3406,7 +3406,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf332"
+        "id": 332
     },
     {
         "question": "A switch has a lot of ports.",
@@ -3415,7 +3415,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf333"
+        "id": 333
     },
     {
         "question": "A switch doesn\u2019t understand MAC addresses.",
@@ -3424,7 +3424,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf334"
+        "id": 334
     },
     {
         "question": "A switch understands MAC addresses.",
@@ -3433,7 +3433,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf335"
+        "id": 335
     },
     {
         "question": "A switch is more performant than a hub.",
@@ -3442,7 +3442,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf336"
+        "id": 336
     },
     {
         "question": "A switch can transport UDP packets.",
@@ -3451,7 +3451,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf337"
+        "id": 337
     },
     {
         "question": "A switch can\u2019t transport TCP packets.",
@@ -3460,7 +3460,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf338"
+        "id": 338
     },
     {
         "question": "A switch can transport TCP packets.",
@@ -3469,7 +3469,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf339"
+        "id": 339
     },
     {
         "question": "A switch can transport IP packets.",
@@ -3478,7 +3478,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf340"
+        "id": 340
     },
     {
         "question": "A switch can\u2019t transport IP packets.",
@@ -3487,7 +3487,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf341"
+        "id": 341
     },
     {
         "question": "A hub doesn\u2019t understand MAC addresses.",
@@ -3496,7 +3496,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf342"
+        "id": 342
     },
     {
         "question": "A hub is more performant than a switch.",
@@ -3505,7 +3505,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf343"
+        "id": 343
     },
     {
         "question": "A hub doesn\u2019t have many ports.",
@@ -3514,7 +3514,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf344"
+        "id": 344
     },
     {
         "question": "A hub understands MAC addresses.",
@@ -3523,7 +3523,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf345"
+        "id": 345
     },
     {
         "question": "A hub has many ports.",
@@ -3532,7 +3532,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf346"
+        "id": 346
     },
     {
         "question": "A hub doesn\u2019t understand MAC addresses.",
@@ -3541,7 +3541,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf347"
+        "id": 347
     },
     {
         "question": "A hub is more performant than a switch.",
@@ -3550,7 +3550,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf348"
+        "id": 348
     },
     {
         "question": "A hub doesn\u2019t have many ports.",
@@ -3559,7 +3559,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf349"
+        "id": 349
     },
     {
         "question": "A hub understands MAC addresses.",
@@ -3568,7 +3568,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf350"
+        "id": 350
     },
     {
         "question": "A hub has many ports.",
@@ -3577,7 +3577,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf351"
+        "id": 351
     },
     {
         "question": "The recvfrom() call sends data to the UDP server.",
@@ -3586,7 +3586,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf352"
+        "id": 352
     },
     {
         "question": "The MAC address is represented on 6 hexa digits.",
@@ -3595,7 +3595,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf353"
+        "id": 353
     },
     {
         "question": "The MAC address is represented on 6 groups of 2 hexa digits.",
@@ -3604,7 +3604,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf354"
+        "id": 354
     },
     {
         "question": "The MAC address is represented on 6 bytes.",
@@ -3613,7 +3613,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf355"
+        "id": 355
     },
     {
         "question": "The MAC address can\u2019t be changed.",
@@ -3622,7 +3622,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf356"
+        "id": 356
     },
     {
         "question": "The MAC address can be changed.",
@@ -3631,7 +3631,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf357"
+        "id": 357
     },
     {
         "question": "FF:FF:FF:FF:FF is the broadcast MAC address.",
@@ -3640,7 +3640,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf358"
+        "id": 358
     },
     {
         "question": "172.31.255.255 is not a private IP address.",
@@ -3649,7 +3649,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf359"
+        "id": 359
     },
     {
         "question": "00:00:00:00:00:00 is not the broadcast MAC address.",
@@ -3658,7 +3658,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf360"
+        "id": 360
     },
     {
         "question": "The routers use MAC addresses to send frames to other networks.",
@@ -3667,7 +3667,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf361"
+        "id": 361
     },
     {
         "question": "255.255.255.255 is the broadcast MAC address.",
@@ -3676,7 +3676,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf362"
+        "id": 362
     },
     {
         "question": "The MAC address is represented on 12 hexa digits.",
@@ -3685,7 +3685,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf363"
+        "id": 363
     },
     {
         "question": "255.255.255.255 is not the broadcast MAC address.",
@@ -3694,7 +3694,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf364"
+        "id": 364
     },
     {
         "question": "FF:FF:FF:FF:FF:FF is the broadcast MAC address.",
@@ -3703,7 +3703,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf365"
+        "id": 365
     },
     {
         "question": "All the network boards have the same MAC address (Media Access Control Address).",
@@ -3712,7 +3712,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf366"
+        "id": 366
     },
     {
         "question": "FF:FF:FF:FF:FF is not the broadcast MAC address.",
@@ -3721,7 +3721,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf367"
+        "id": 367
     },
     {
         "question": "The MAC address has 64 bits.",
@@ -3730,7 +3730,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf368"
+        "id": 368
     },
     {
         "question": "FF:FF:FF:FF:FF:FF is not the broadcast MAC address.",
@@ -3739,7 +3739,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf369"
+        "id": 369
     },
     {
         "question": "SSH is not on the Link Layer.",
@@ -3748,7 +3748,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf370"
+        "id": 370
     },
     {
         "question": "SSH is not on the Transport Layer.",
@@ -3757,7 +3757,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf371"
+        "id": 371
     },
     {
         "question": "SSH is not on the Network Layer.",
@@ -3766,7 +3766,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf372"
+        "id": 372
     },
     {
         "question": "SSH is on the Transport Layer.",
@@ -3775,7 +3775,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf373"
+        "id": 373
     },
     {
         "question": "SSH is on the Link Layer.",
@@ -3784,7 +3784,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf374"
+        "id": 374
     },
     {
         "question": "SSH is on the Network Layer.",
@@ -3793,7 +3793,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf375"
+        "id": 375
     },
     {
         "question": "SSH is not on the Application Layer.",
@@ -3802,7 +3802,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf376"
+        "id": 376
     },
     {
         "question": "SSH is on the Application Layer.",
@@ -3811,7 +3811,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf377"
+        "id": 377
     },
     {
         "question": "IP is on the Transport Layer.",
@@ -3820,7 +3820,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf378"
+        "id": 378
     },
     {
         "question": "IP is on the Application Layer.",
@@ -3829,7 +3829,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf379"
+        "id": 379
     },
     {
         "question": "IP is on the Network Layer.",
@@ -3838,7 +3838,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf380"
+        "id": 380
     },
     {
         "question": "IP is on the Link Layer.",
@@ -3847,7 +3847,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf381"
+        "id": 381
     },
     {
         "question": "IP is not on the Transport Layer.",
@@ -3856,7 +3856,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf382"
+        "id": 382
     },
     {
         "question": "IP is not on the Application Layer.",
@@ -3865,7 +3865,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf383"
+        "id": 383
     },
     {
         "question": "IP is not on the Network Layer.",
@@ -3874,7 +3874,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf384"
+        "id": 384
     },
     {
         "question": "IP is not on the Link Layer.",
@@ -3883,7 +3883,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf385"
+        "id": 385
     },
     {
         "question": "HTTP is on the Transport Layer.",
@@ -3892,7 +3892,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf386"
+        "id": 386
     },
     {
         "question": "HTTP is on the Application Layer.",
@@ -3901,7 +3901,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf387"
+        "id": 387
     },
     {
         "question": "HTTP is on the Network Layer.",
@@ -3910,7 +3910,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf388"
+        "id": 388
     },
     {
         "question": "HTTP is on the Link Layer.",
@@ -3919,7 +3919,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf389"
+        "id": 389
     },
     {
         "question": "HTTP is not on the Transport Layer.",
@@ -3928,7 +3928,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf390"
+        "id": 390
     },
     {
         "question": "HTTP is not on the Application Layer.",
@@ -3937,7 +3937,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf391"
+        "id": 391
     },
     {
         "question": "HTTP is not on the Network Layer.",
@@ -3946,7 +3946,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf392"
+        "id": 392
     },
     {
         "question": "HTTP is not on the Link Layer.",
@@ -3955,7 +3955,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf393"
+        "id": 393
     },
     {
         "question": "SMTP is on the Transport Layer.",
@@ -3964,7 +3964,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf394"
+        "id": 394
     },
     {
         "question": "SMTP is on the Application Layer.",
@@ -3973,7 +3973,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf395"
+        "id": 395
     },
     {
         "question": "SMTP is on the Network Layer.",
@@ -3982,7 +3982,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf396"
+        "id": 396
     },
     {
         "question": "SMTP is on the Link Layer.",
@@ -3991,7 +3991,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf397"
+        "id": 397
     },
     {
         "question": "SMTP is not on the Transport Layer.",
@@ -4000,7 +4000,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf398"
+        "id": 398
     },
     {
         "question": "SMTP is not on the Application Layer.",
@@ -4009,7 +4009,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf399"
+        "id": 399
     },
     {
         "question": "SMTP is not on the Network Layer.",
@@ -4018,7 +4018,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf400"
+        "id": 400
     },
     {
         "question": "SMTP is not on the Link Layer.",
@@ -4027,7 +4027,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf401"
+        "id": 401
     },
     {
         "question": "SMTP is not on the Link Layer.",
@@ -4036,7 +4036,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf402"
+        "id": 402
     },
     {
         "question": "DNS is on the Transport Layer.",
@@ -4045,7 +4045,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf403"
+        "id": 403
     },
     {
         "question": "DNS is on the Application Layer.",
@@ -4054,7 +4054,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf404"
+        "id": 404
     },
     {
         "question": "DNS is on the Network Layer.",
@@ -4063,7 +4063,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf405"
+        "id": 405
     },
     {
         "question": "DNS is on the Link Layer.",
@@ -4072,7 +4072,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf406"
+        "id": 406
     },
     {
         "question": "DNS is not on the Transport Layer.",
@@ -4081,7 +4081,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf407"
+        "id": 407
     },
     {
         "question": "DNS is not on the Application Layer.",
@@ -4090,7 +4090,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf408"
+        "id": 408
     },
     {
         "question": "DNS is not on the Network Layer.",
@@ -4099,7 +4099,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf409"
+        "id": 409
     },
     {
         "question": "DNS is not on the Link Layer.",
@@ -4108,7 +4108,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf410"
+        "id": 410
     },
     {
         "question": "FTP is on the Transport Layer.",
@@ -4117,7 +4117,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf411"
+        "id": 411
     },
     {
         "question": "FTP is on the Application Layer.",
@@ -4126,7 +4126,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf412"
+        "id": 412
     },
     {
         "question": "FTP is on the Network Layer.",
@@ -4135,7 +4135,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf413"
+        "id": 413
     },
     {
         "question": "FTP is on the Link Layer.",
@@ -4144,7 +4144,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf414"
+        "id": 414
     },
     {
         "question": "FTP is not on the Transport Layer.",
@@ -4153,7 +4153,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf415"
+        "id": 415
     },
     {
         "question": "FTP is not on the Application Layer.",
@@ -4162,7 +4162,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf416"
+        "id": 416
     },
     {
         "question": "FTP is not on the Network Layer.",
@@ -4171,7 +4171,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf417"
+        "id": 417
     },
     {
         "question": "FTP is not on the Link Layer.",
@@ -4180,7 +4180,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf418"
+        "id": 418
     },
     {
         "question": "TCP is on the Transport Layer.",
@@ -4189,7 +4189,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf419"
+        "id": 419
     },
     {
         "question": "TCP is on the Application Layer.",
@@ -4198,7 +4198,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf420"
+        "id": 420
     },
     {
         "question": "TCP is on the Network Layer.",
@@ -4207,7 +4207,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf421"
+        "id": 421
     },
     {
         "question": "TCP is on the Link Layer.",
@@ -4216,7 +4216,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf422"
+        "id": 422
     },
     {
         "question": "TCP is not on the Transport Layer.",
@@ -4225,7 +4225,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf423"
+        "id": 423
     },
     {
         "question": "TCP is not on the Application Layer.",
@@ -4234,7 +4234,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf424"
+        "id": 424
     },
     {
         "question": "TCP is not on the Network Layer.",
@@ -4243,7 +4243,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf425"
+        "id": 425
     },
     {
         "question": "TCP is not on the Link Layer.",
@@ -4252,7 +4252,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf426"
+        "id": 426
     },
     {
         "question": "UDP is on the Transport Layer.",
@@ -4261,7 +4261,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf427"
+        "id": 427
     },
     {
         "question": "UDP is on the Application Layer.",
@@ -4270,7 +4270,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf428"
+        "id": 428
     },
     {
         "question": "UDP is on the Network Layer.",
@@ -4279,7 +4279,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf429"
+        "id": 429
     },
     {
         "question": "UDP is on the Link Layer.",
@@ -4288,7 +4288,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf430"
+        "id": 430
     },
     {
         "question": "UDP is not on the Transport Layer.",
@@ -4297,7 +4297,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf431"
+        "id": 431
     },
     {
         "question": "UDP is not on the Application Layer.",
@@ -4306,7 +4306,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf432"
+        "id": 432
     },
     {
         "question": "UDP is not on the Network Layer.",
@@ -4315,7 +4315,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf433"
+        "id": 433
     },
     {
         "question": "UDP is not on the Link Layer.",
@@ -4324,7 +4324,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf434"
+        "id": 434
     },
     {
         "question": "The address 192.168.0.255 can\u2019t be a network address.",
@@ -4333,7 +4333,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf435"
+        "id": 435
     },
     {
         "question": "The address 127.0.0.1 can be a network address.",
@@ -4342,7 +4342,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf436"
+        "id": 436
     },
     {
         "question": "The address 193.231.20.2 can be a network address.",
@@ -4351,7 +4351,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf437"
+        "id": 437
     },
     {
         "question": "The address 193.256.20.0 can be a network address.",
@@ -4360,7 +4360,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf438"
+        "id": 438
     },
     {
         "question": "The address 192.231.20.1 can be a network address.",
@@ -4369,7 +4369,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf439"
+        "id": 439
     },
     {
         "question": "The address 192.231.20.3 can be a network address.",
@@ -4378,7 +4378,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf440"
+        "id": 440
     },
     {
         "question": "The address 43.29.45.80/27 can be a network address.",
@@ -4387,7 +4387,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf441"
+        "id": 441
     },
     {
         "question": "The address 192.168.2.160/24 can be a network address.",
@@ -4396,7 +4396,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf442"
+        "id": 442
     },
     {
         "question": "The address 43.23.87.68/26 can be a network address.",
@@ -4405,7 +4405,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf443"
+        "id": 443
     },
     {
         "question": "The address 192.168.2.160/25 can be a network address.",
@@ -4414,7 +4414,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf444"
+        "id": 444
     },
     {
         "question": "The address 192.168.0.255 can be a network address.",
@@ -4423,7 +4423,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf445"
+        "id": 445
     },
     {
         "question": "The address 193.255.20.0 can be a network address.",
@@ -4432,7 +4432,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf446"
+        "id": 446
     },
     {
         "question": "The address 193.231.20.0 can be a network address.",
@@ -4441,7 +4441,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf447"
+        "id": 447
     },
     {
         "question": "The address 193.231.20.4 can be a network address.",
@@ -4450,7 +4450,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf448"
+        "id": 448
     },
     {
         "question": "The address 193.255.20.0 can be a network address.",
@@ -4459,7 +4459,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf449"
+        "id": 449
     },
     {
         "question": "The address 192.168.2.32/27 can be a network address.",
@@ -4468,7 +4468,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf450"
+        "id": 450
     },
     {
         "question": "The address 43.23.87.64/27 can be a network address.",
@@ -4477,7 +4477,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf451"
+        "id": 451
     },
     {
         "question": "The address 192.168.2.128/25 can be a network address.",
@@ -4486,7 +4486,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf452"
+        "id": 452
     },
     {
         "question": "The network address can be computed with the broadcast address and the netmask.",
@@ -4495,7 +4495,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf453"
+        "id": 453
     },
     {
         "question": "The network address can be computed with the broadcast address and the IP address.",
@@ -4504,7 +4504,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf454"
+        "id": 454
     },
     {
         "question": "The network address can\u2019t be computed with the broadcast address and the netmask.",
@@ -4513,7 +4513,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf455"
+        "id": 455
     },
     {
         "question": "The network address can\u2019t be computed with the IP address and the netmask.",
@@ -4522,7 +4522,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf456"
+        "id": 456
     },
     {
         "question": "The network address can\u2019t be computed with the broadcast address and the IP address.",
@@ -4531,7 +4531,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf457"
+        "id": 457
     },
     {
         "question": "The network address can be computed with the IP address and the netmask.",
@@ -4540,7 +4540,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf458"
+        "id": 458
     },
     {
         "question": "There is only one computer with the address 127.0.0.1.",
@@ -4549,7 +4549,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf459"
+        "id": 459
     },
     {
         "question": "All the IP addresses in the class 172.0.0.0/8 are private.",
@@ -4558,7 +4558,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf460"
+        "id": 460
     },
     {
         "question": "Not all the IP addresses in the class 172.0.0.0/8 are private.",
@@ -4567,7 +4567,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf461"
+        "id": 461
     },
     {
         "question": "168.168.168.168 is a private IP address.",
@@ -4576,7 +4576,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf462"
+        "id": 462
     },
     {
         "question": "168.168.168.168 is not a private IP address.",
@@ -4585,7 +4585,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf463"
+        "id": 463
     },
     {
         "question": "1.1.1.1 is a private IP address.",
@@ -4594,7 +4594,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf464"
+        "id": 464
     },
     {
         "question": "Not all the IP addresses from the class 10.0.0.0/6 are private.",
@@ -4603,7 +4603,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf465"
+        "id": 465
     },
     {
         "question": "127.16.0.1 is not a private address.",
@@ -4612,7 +4612,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf466"
+        "id": 466
     },
     {
         "question": "All the IP addresses from the class 172.0.0.0/12 are private.",
@@ -4621,7 +4621,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf467"
+        "id": 467
     },
     {
         "question": "127.16.0.1 is a private IP address.",
@@ -4630,7 +4630,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf468"
+        "id": 468
     },
     {
         "question": "172.32.0.1 is a private IP address.",
@@ -4639,7 +4639,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf469"
+        "id": 469
     },
     {
         "question": "1.1.1.1 is not a private IP address.",
@@ -4648,7 +4648,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf470"
+        "id": 470
     },
     {
         "question": "172.15.0.1 is not a private IP address.",
@@ -4657,7 +4657,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf471"
+        "id": 471
     },
     {
         "question": "Not all the IP addresses in the class 192.168.0.0/8 are private.",
@@ -4666,7 +4666,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf472"
+        "id": 472
     },
     {
         "question": "All the IP addresses from the class 172.16.0.0/12 are private.",
@@ -4675,7 +4675,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf473"
+        "id": 473
     },
     {
         "question": "172.16.0.1 is not a private IP address.",
@@ -4684,7 +4684,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf474"
+        "id": 474
     },
     {
         "question": "172.31.0.1 is not a private IP address.",
@@ -4693,7 +4693,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf475"
+        "id": 475
     },
     {
         "question": "Not all the IP addresses in the class 192.168.0.0/16 are private.",
@@ -4702,7 +4702,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf476"
+        "id": 476
     },
     {
         "question": "All the IP addresses from the class 10.0.0.0/16 are private.",
@@ -4711,7 +4711,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf477"
+        "id": 477
     },
     {
         "question": "192.168.168.168 is not a private IP address.",
@@ -4720,7 +4720,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf478"
+        "id": 478
     },
     {
         "question": "172.31.255.255 is a private IP address.",
@@ -4729,7 +4729,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf479"
+        "id": 479
     },
     {
         "question": "172.31.255.255 is not a private IP address.",
@@ -4738,7 +4738,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf480"
+        "id": 480
     },
     {
         "question": "Not all the IP addresses from the class 10.0.0.0/8 are private.",
@@ -4747,7 +4747,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf481"
+        "id": 481
     },
     {
         "question": "10.10.10.10 is a private IP address.",
@@ -4756,7 +4756,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf482"
+        "id": 482
     },
     {
         "question": "All the IP addresses from the class 10.0.0.0/8 are private.",
@@ -4765,7 +4765,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf483"
+        "id": 483
     },
     {
         "question": "172.16.0.1 is a private IP address.",
@@ -4774,7 +4774,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf484"
+        "id": 484
     },
     {
         "question": "Not all the IP addresses from the class 172.16.0.0/12 are private.",
@@ -4783,7 +4783,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf485"
+        "id": 485
     },
     {
         "question": "192.168.168.168 is a private IP address.",
@@ -4792,7 +4792,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf486"
+        "id": 486
     },
     {
         "question": "Not all the IP addresses from the class 10.0.0.0/16 are private.",
@@ -4801,7 +4801,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf487"
+        "id": 487
     },
     {
         "question": "CLI comes from Command Line Interface.",
@@ -4810,7 +4810,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf488"
+        "id": 488
     },
     {
         "question": "ARP means Address Resolution Protocol.",
@@ -4819,7 +4819,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf489"
+        "id": 489
     },
     {
         "question": "MAC means Media Access Control.",
@@ -4828,7 +4828,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf490"
+        "id": 490
     },
     {
         "question": "DNS means Domain Name System.",
@@ -4837,7 +4837,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf491"
+        "id": 491
     },
     {
         "question": "Two computers from the Internet can have the same IP address if they have the same MAC address.",
@@ -4846,7 +4846,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf492"
+        "id": 492
     },
     {
         "question": "LAN is an acronym for Limited Area Network.",
@@ -4855,7 +4855,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf493"
+        "id": 493
     },
     {
         "question": "HTTP means Hyperspeed Transfer Protocol.",
@@ -4864,7 +4864,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf494"
+        "id": 494
     },
     {
         "question": "HTTP means Hypertext Transfer Protocol.",
@@ -4873,7 +4873,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf495"
+        "id": 495
     },
     {
         "question": "MAC means Media Address Control.",
@@ -4882,7 +4882,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf496"
+        "id": 496
     },
     {
         "question": "CLI comes from Coding Line Interface.",
@@ -4891,7 +4891,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf497"
+        "id": 497
     },
     {
         "question": "ARP doesn\u2019t mean Address Resolution Protocol.",
@@ -4900,7 +4900,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf498"
+        "id": 498
     },
     {
         "question": "DNS means Domain Name Service.",
@@ -4909,7 +4909,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf499"
+        "id": 499
     },
     {
         "question": "There are only two standard network topologies: Bus and Star.",
@@ -4918,7 +4918,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf500"
+        "id": 500
     },
     {
         "question": "Ring is a network topology.",
@@ -4927,7 +4927,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf501"
+        "id": 501
     },
     {
         "question": "Ring is not a network topology.",
@@ -4936,7 +4936,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf502"
+        "id": 502
     },
     {
         "question": "Star is not a network topology.",
@@ -4945,7 +4945,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf503"
+        "id": 503
     },
     {
         "question": "There are more than two standard network topologies.",
@@ -4954,7 +4954,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf504"
+        "id": 504
     },
     {
         "question": "Bus is a network topology.",
@@ -4963,7 +4963,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf505"
+        "id": 505
     },
     {
         "question": "Star is a network topology.",
@@ -4972,7 +4972,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf506"
+        "id": 506
     },
     {
         "question": "Bus is not a network topology.",
@@ -4981,7 +4981,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf507"
+        "id": 507
     },
     {
         "question": "HTTP does not use the TCP protocol.",
@@ -4990,7 +4990,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf508"
+        "id": 508
     },
     {
         "question": "HTTP uses the UDP protocol.",
@@ -4999,7 +4999,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf509"
+        "id": 509
     },
     {
         "question": "DNS uses the TCP protocol.",
@@ -5008,7 +5008,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf510"
+        "id": 510
     },
     {
         "question": "DNS uses the UDP protocol.",
@@ -5017,7 +5017,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf511"
+        "id": 511
     },
     {
         "question": "HTTP uses the TCP protocol.",
@@ -5026,7 +5026,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf512"
+        "id": 512
     },
     {
         "question": "UDP is connection-oriented.",
@@ -5035,7 +5035,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf513"
+        "id": 513
     },
     {
         "question": "TCP is connection-oriented.",
@@ -5044,7 +5044,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf514"
+        "id": 514
     },
     {
         "question": "TCP is not connection-oriented.",
@@ -5053,7 +5053,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf515"
+        "id": 515
     },
     {
         "question": "The dimension of an IP address class doesn\u2019t have to be a power of 2.",
@@ -5062,7 +5062,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf516"
+        "id": 516
     },
     {
         "question": "The dimension of an IP address class has to be a power of 2.",
@@ -5071,7 +5071,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf517"
+        "id": 517
     },
     {
         "question": "The dimension of a network is 2^n, where n is the number of 0\u2019s in the IP.",
@@ -5080,7 +5080,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf518"
+        "id": 518
     },
     {
         "question": "The dimension of a network is 2^n, where n is the number of 0\u2019s in the netmask.",
@@ -5089,7 +5089,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf519"
+        "id": 519
     },
     {
         "question": "The dimension of a network is 2^n, where n is the number of 1\u2019s in the netmask.",
@@ -5098,7 +5098,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf520"
+        "id": 520
     },
     {
         "question": "A computer can have more network boards.",
@@ -5107,7 +5107,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf521"
+        "id": 521
     },
     {
         "question": "A computer can have only one network board.",
@@ -5116,7 +5116,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf522"
+        "id": 522
     },
     {
         "question": "There can\u2019t exist computers with the address 192.168.1.0.",
@@ -5125,7 +5125,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf523"
+        "id": 523
     },
     {
         "question": "A computer can have more IP addresses.",
@@ -5134,7 +5134,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf524"
+        "id": 524
     },
     {
         "question": "A computer can\u2019t have 2 gateways.",
@@ -5143,7 +5143,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf525"
+        "id": 525
     },
     {
         "question": "The DNS server configured on a computer has to be in the same network with the computer.",
@@ -5152,7 +5152,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf526"
+        "id": 526
     },
     {
         "question": "In a LAN there can\u2019t be more computers with the address 192.168.1.1.",
@@ -5161,7 +5161,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf527"
+        "id": 527
     },
     {
         "question": "There can be computers with the address 192.168.1.0.",
@@ -5170,7 +5170,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf528"
+        "id": 528
     },
     {
         "question": "2 computers from the Internet can have the same IP address if they have the same MAC address.",
@@ -5179,7 +5179,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf529"
+        "id": 529
     },
     {
         "question": "A computer can have only one IP address.",
@@ -5188,7 +5188,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf530"
+        "id": 530
     },
     {
         "question": "A computer is connected to a switch through a Straight-Through cable.",
@@ -5197,7 +5197,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf531"
+        "id": 531
     },
     {
         "question": "2 computers from the same network both physically and logically can\u2019t have different default gateways.",
@@ -5206,7 +5206,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf532"
+        "id": 532
     },
     {
         "question": "A router is connected to a computer with a Cross-Over cable.",
@@ -5215,7 +5215,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf533"
+        "id": 533
     },
     {
         "question": "A web server can\u2019t run on ports different than 80.",
@@ -5224,7 +5224,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf534"
+        "id": 534
     },
     {
         "question": "The DNS server configured on a computer can be in the same network with the computer.",
@@ -5233,7 +5233,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf535"
+        "id": 535
     },
     {
         "question": "A DNS server can be default gateway.",
@@ -5242,7 +5242,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf536"
+        "id": 536
     },
     {
         "question": "More websites can\u2019t be hosted on the same web server.",
@@ -5251,7 +5251,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf537"
+        "id": 537
     },
     {
         "question": "The netmask can\u2019t contain 0 bits embedded with 1 bits.",
@@ -5260,7 +5260,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf538"
+        "id": 538
     },
     {
         "question": "The netmask can be determined using the IP address and the network address.",
@@ -5269,7 +5269,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf539"
+        "id": 539
     },
     {
         "question": "The netmask can be determined using the IP address and the broadcast address.",
@@ -5278,7 +5278,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf540"
+        "id": 540
     },
     {
         "question": "0.0.0.0 represents a valid netmask.",
@@ -5287,7 +5287,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf541"
+        "id": 541
     },
     {
         "question": "255.255.224.0 represents a valid netmask.",
@@ -5296,7 +5296,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf542"
+        "id": 542
     },
     {
         "question": "The netmask of a network with 1024 IP addresses is /10.",
@@ -5305,7 +5305,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf543"
+        "id": 543
     },
     {
         "question": "255.255.0.0 represents a valid netmask.",
@@ -5314,7 +5314,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf544"
+        "id": 544
     },
     {
         "question": "A network with the netmask 255.255.255.0 can have max. 254 computers.",
@@ -5323,7 +5323,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf545"
+        "id": 545
     },
     {
         "question": "The netmask of a network with 1024 IP addresses is /12.",
@@ -5332,7 +5332,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf546"
+        "id": 546
     },
     {
         "question": "The netmask of a network with 512 IP addresses is /23.",
@@ -5341,7 +5341,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf547"
+        "id": 547
     },
     {
         "question": "0.0.0.0 is not a valid netmask.",
@@ -5350,7 +5350,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf548"
+        "id": 548
     },
     {
         "question": "255.254.0.0 is a valid netmask.",
@@ -5359,7 +5359,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf549"
+        "id": 549
     },
     {
         "question": "The netmask can\u2019t be determined using the IP address and the network address.",
@@ -5368,7 +5368,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf550"
+        "id": 550
     },
     {
         "question": "The netmask of a network with 1024 IP addresses is /22.",
@@ -5377,7 +5377,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf551"
+        "id": 551
     },
     {
         "question": "The netmask can\u2019t be determined using the IP address and the broadcast address.",
@@ -5386,7 +5386,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf552"
+        "id": 552
     },
     {
         "question": "A netmask is a binary number on 48 bits.",
@@ -5395,7 +5395,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf553"
+        "id": 553
     },
     {
         "question": "A network with the netmask 255.255.255.0 has 128 IP\u2019s.",
@@ -5404,7 +5404,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf554"
+        "id": 554
     },
     {
         "question": "255.255.225.0 is a valid netmask.",
@@ -5413,7 +5413,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf555"
+        "id": 555
     },
     {
         "question": "The netmask of a network with 512 IP addresses is /24.",
@@ -5422,7 +5422,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf556"
+        "id": 556
     },
     {
         "question": "The netmask of a network with 1024 IP addresses is /23.",
@@ -5431,7 +5431,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf557"
+        "id": 557
     },
     {
         "question": "The netmask can be computed using the broadcast address and the network address.",
@@ -5440,7 +5440,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf558"
+        "id": 558
     },
     {
         "question": "The netmask can contain 0 bits embedded with 1 bits.",
@@ -5449,7 +5449,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf559"
+        "id": 559
     },
     {
         "question": "254.255.0.0 represents a valid netmask.",
@@ -5458,7 +5458,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf560"
+        "id": 560
     },
     {
         "question": "A network with the netmask 255.255.255.0 can have max. 256 computers.",
@@ -5467,7 +5467,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf561"
+        "id": 561
     },
     {
         "question": "A netmask is a binary number on 32 bits.",
@@ -5476,7 +5476,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf562"
+        "id": 562
     },
     {
         "question": "There are other types of sockets besides TCP and UDP.",
@@ -5485,7 +5485,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf563"
+        "id": 563
     },
     {
         "question": "There are only TCP and UDP sockets.",
@@ -5494,7 +5494,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf564"
+        "id": 564
     },
     {
         "question": "There can\u2019t be more computers with the address 127.0.0.1.",
@@ -5503,7 +5503,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf565"
+        "id": 565
     },
     {
         "question": "There are more computers with the address 127.0.0.1.",
@@ -5512,7 +5512,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf566"
+        "id": 566
     },
     {
         "question": "The address 127.0.0.1 can be a broadcast address.",
@@ -5521,7 +5521,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf567"
+        "id": 567
     },
     {
         "question": "127.0.0.1 can\u2019t be configured on a system as default gateway.",
@@ -5530,7 +5530,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf568"
+        "id": 568
     },
     {
         "question": "127.0.0.1 can\u2019t be configured on a system as a DNS server.",
@@ -5539,7 +5539,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf569"
+        "id": 569
     },
     {
         "question": "The localhost is not 172.0.0.1.",
@@ -5548,7 +5548,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf570"
+        "id": 570
     },
     {
         "question": "The localhost is 172.0.0.1.",
@@ -5557,7 +5557,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf571"
+        "id": 571
     },
     {
         "question": "The address 127.0.0.1 can\u2019t be a network address.",
@@ -5566,7 +5566,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf572"
+        "id": 572
     },
     {
         "question": "83.255.255.128.0 = /23",
@@ -5575,7 +5575,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf573"
+        "id": 573
     },
     {
         "question": "255.255.128.0 = /17",
@@ -5584,7 +5584,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf574"
+        "id": 574
     },
     {
         "question": "11111111 10000000 00000000 00000000 = 255.128.0.0",
@@ -5593,7 +5593,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf575"
+        "id": 575
     },
     {
         "question": "193.55.44.170 & 255.255.255.128 = 193.55.43.128",
@@ -5602,7 +5602,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf576"
+        "id": 576
     },
     {
         "question": "11111111 10000000 00000000 00000000 = 255.1.0.0",
@@ -5611,7 +5611,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf577"
+        "id": 577
     },
     {
         "question": "TCP is always faster than UDP.",
@@ -5620,7 +5620,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf578"
+        "id": 578
     },
     {
         "question": "UDP is sometimes faster than TCP.",
@@ -5629,7 +5629,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf579"
+        "id": 579
     },
     {
         "question": "TCP is sometimes faster than UDP.",
@@ -5638,7 +5638,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf580"
+        "id": 580
     },
     {
         "question": "UDP is always faster than TCP.",
@@ -5647,7 +5647,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf581"
+        "id": 581
     },
     {
         "question": "TCP is safer than UDP.",
@@ -5656,7 +5656,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf582"
+        "id": 582
     },
     {
         "question": "The accept() call is mandatory in any TCP server.",
@@ -5665,7 +5665,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf583"
+        "id": 583
     },
     {
         "question": "The accept() call is mandatory in any UDP client.",
@@ -5674,7 +5674,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf584"
+        "id": 584
     },
     {
         "question": "The accept() call can be used in any TCP server.",
@@ -5683,7 +5683,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf585"
+        "id": 585
     },
     {
         "question": "The accept() call is mandatory in any TCP client.",
@@ -5692,7 +5692,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf586"
+        "id": 586
     },
     {
         "question": "The accept() call is not mandatory in any TCP client.",
@@ -5701,7 +5701,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf587"
+        "id": 587
     },
     {
         "question": "The recvfrom() call reads data from the UDP server.",
@@ -5710,7 +5710,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf588"
+        "id": 588
     },
     {
         "question": "The recvfrom() call reads data from the TCP server.",
@@ -5719,7 +5719,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf589"
+        "id": 589
     },
     {
         "question": "The recvfrom() call sends data to the TCP client.",
@@ -5728,7 +5728,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf590"
+        "id": 590
     },
     {
         "question": "The recvfrom() call sends data to the UDP client.",
@@ -5737,7 +5737,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf591"
+        "id": 591
     },
     {
         "question": "The recvfrom() call doesn\u2019t send data to the TCP server.",
@@ -5746,7 +5746,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf592"
+        "id": 592
     },
     {
         "question": "The recvfrom() call doesn\u2019t send data to the TCP client.",
@@ -5755,7 +5755,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf593"
+        "id": 593
     },
     {
         "question": "The recvfrom() call sends data to the UDP server.",
@@ -5764,7 +5764,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf594"
+        "id": 594
     },
     {
         "question": "The recvfrom() call sends data to the TCP server.",
@@ -5773,7 +5773,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf595"
+        "id": 595
     },
     {
         "question": "The recvfrom() call doesn\u2019t send data to the UDP client.",
@@ -5782,7 +5782,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf596"
+        "id": 596
     },
     {
         "question": "The recvfrom() call reads data from the UDP client.",
@@ -5791,7 +5791,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf597"
+        "id": 597
     },
     {
         "question": "The recvfrom() call reads data from the TCP client.",
@@ -5800,7 +5800,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf598"
+        "id": 598
     },
     {
         "question": "The connect() call is mandatory in any TCP server.",
@@ -5809,7 +5809,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf599"
+        "id": 599
     },
     {
         "question": "The connect() call is mandatory in any UDP client.",
@@ -5818,7 +5818,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf600"
+        "id": 600
     },
     {
         "question": "The connect() call can\u2019t be used in UDP clients.",
@@ -5827,7 +5827,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf601"
+        "id": 601
     },
     {
         "question": "The connect() call can\u2019t be used in TCP clients.",
@@ -5836,7 +5836,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf602"
+        "id": 602
     },
     {
         "question": "The connect() call can be used in UDP clients.",
@@ -5845,7 +5845,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf603"
+        "id": 603
     },
     {
         "question": "The connect() call can be used in TCP clients.",
@@ -5854,7 +5854,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf604"
+        "id": 604
     },
     {
         "question": "The connect() call is mandatory in any UDP server.",
@@ -5863,7 +5863,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf605"
+        "id": 605
     },
     {
         "question": "The connect() call is mandatory in any TCP client.",
@@ -5872,7 +5872,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf606"
+        "id": 606
     },
     {
         "question": "The sendto() call sends data to the UDP client.",
@@ -5881,7 +5881,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf607"
+        "id": 607
     },
     {
         "question": "The sendto() call sends data to the UDP server.",
@@ -5890,7 +5890,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf608"
+        "id": 608
     },
     {
         "question": "The sendto() call sends data to the TCP client.",
@@ -5899,7 +5899,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf609"
+        "id": 609
     },
     {
         "question": "The sendto() call sends data to the TCP server.",
@@ -5908,7 +5908,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf610"
+        "id": 610
     },
     {
         "question": "The listen() call is mandatory in any TCP client.",
@@ -5917,7 +5917,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf611"
+        "id": 611
     },
     {
         "question": "The listen() call is not mandatory in any TCP client.",
@@ -5926,7 +5926,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf612"
+        "id": 612
     },
     {
         "question": "The listen() call is mandatory in any UDP server.",
@@ -5935,7 +5935,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf613"
+        "id": 613
     },
     {
         "question": "The listen() call can be used in any TCP server.",
@@ -5944,7 +5944,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf614"
+        "id": 614
     },
     {
         "question": "The listen() call is mandatory in any TCP server.",
@@ -5953,7 +5953,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf615"
+        "id": 615
     },
     {
         "question": "The bind() call can be used in UDP clients.",
@@ -5962,7 +5962,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf616"
+        "id": 616
     },
     {
         "question": "The bind() call can be used in TCP clients.",
@@ -5971,7 +5971,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf617"
+        "id": 617
     },
     {
         "question": "The bind() call can\u2019t be used in TCP clients.",
@@ -5980,7 +5980,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf618"
+        "id": 618
     },
     {
         "question": "The bind() call can\u2019t be used in UDP clients.",
@@ -5989,7 +5989,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf619"
+        "id": 619
     },
     {
         "question": "The bind() call is mandatory in any TCP server.",
@@ -5998,7 +5998,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf620"
+        "id": 620
     },
     {
         "question": "The bind() call is mandatory in any TCP client.",
@@ -6007,7 +6007,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf621"
+        "id": 621
     },
     {
         "question": "The bind() call is mandatory in any UDP server.",
@@ -6016,7 +6016,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf622"
+        "id": 622
     },
     {
         "question": "A /24 class can be divided in 2 /25 subclasses.",
@@ -6025,7 +6025,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf623"
+        "id": 623
     },
     {
         "question": "A class of IP addresses has to start at a multiple of the dimension of the class.",
@@ -6034,7 +6034,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf624"
+        "id": 624
     },
     {
         "question": "A class of IP addresses doesn\u2019t have to start at a multiple of the dimension of the class.",
@@ -6043,7 +6043,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf625"
+        "id": 625
     },
     {
         "question": "A /24 class can be divided in 2 subclasses of 128 IP\u2019s.",
@@ -6052,7 +6052,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf626"
+        "id": 626
     },
     {
         "question": "A /24 class can be divided in 3 subclasses of 128 IP\u2019s.",
@@ -6061,7 +6061,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf627"
+        "id": 627
     },
     {
         "question": "192.168.2.155 is part of the 192.168.0.0/23 class.",
@@ -6070,7 +6070,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf628"
+        "id": 628
     },
     {
         "question": "192.168.1.2/24 and 192.168.1.6/22 are part of the same network.",
@@ -6079,7 +6079,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf629"
+        "id": 629
     },
     {
         "question": "A network with the mask 255.255.255.0 has 256 IP\u2019s.",
@@ -6088,7 +6088,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf630"
+        "id": 630
     },
     {
         "question": "A /24 class can be divided in 2 subclasses of 256 IP\u2019s.",
@@ -6097,7 +6097,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf631"
+        "id": 631
     },
     {
         "question": "192.168.1.155 is part of the class 192.168.1.0/24.",
@@ -6106,7 +6106,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf632"
+        "id": 632
     },
     {
         "question": "The class 193.231.20.0/24 can be divided in 2 subclasses of 128 IP\u2019s.",
@@ -6115,7 +6115,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf633"
+        "id": 633
     },
     {
         "question": "192.168.2.155 is part of the class 192.168.0.0/22.",
@@ -6124,7 +6124,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf634"
+        "id": 634
     },
     {
         "question": "A class /16 can\u2019t be divided in 16 /20 classes.",
@@ -6133,7 +6133,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf635"
+        "id": 635
     },
     {
         "question": "A /24 class can be divided in 3 /26 classes.",
@@ -6142,7 +6142,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf636"
+        "id": 636
     },
     {
         "question": "192.168.1.155 is part of the class 192.168.1.0/25.",
@@ -6151,7 +6151,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf637"
+        "id": 637
     },
     {
         "question": "192.168.1.155 is part of the class 192.168.0.0/24.",
@@ -6160,7 +6160,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf638"
+        "id": 638
     },
     {
         "question": "A /8 class can be divided in 4 /10 classes.",
@@ -6169,7 +6169,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf639"
+        "id": 639
     },
     {
         "question": "The class 192.231.20.0/24 can be divided in 3 subclasses of 128 IP\u2019s.",
@@ -6178,7 +6178,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf640"
+        "id": 640
     },
     {
         "question": "192.168.0.2/24 and 192.168.1.6/24 are part of the same network.",
@@ -6187,7 +6187,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf641"
+        "id": 641
     },
     {
         "question": "A /16 class can be divided in 16 /20 classes.",
@@ -6196,7 +6196,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf642"
+        "id": 642
     },
     {
         "question": "192.168.0.2/23 and 192.168.1.6/23 are part of the same network.",
@@ -6205,7 +6205,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf643"
+        "id": 643
     },
     {
         "question": "A /24 class can be divided in 3 /25 subclasses.",
@@ -6214,7 +6214,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf644"
+        "id": 644
     },
     {
         "question": "192.168.1.155 is part of the class 192.168.0.0/23.",
@@ -6223,7 +6223,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf645"
+        "id": 645
     },
     {
         "question": "A /24 class can be divided in 2 subclasses of 512 IP\u2019s.",
@@ -6232,7 +6232,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf646"
+        "id": 646
     },
     {
         "question": "A /8 class can be divided in 4 /9 classes",
@@ -6241,7 +6241,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf647"
+        "id": 647
     },
     {
         "question": "The subnetwork address for the station with the IP address 192.120.0.1/16 is 192.120.0.1.",
@@ -6250,7 +6250,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf648"
+        "id": 648
     },
     {
         "question": "The subnetwork address for the station with the IP address 192.120.0.1/16 is 192.120.0.0.",
@@ -6259,7 +6259,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf649"
+        "id": 649
     },
     {
         "question": "There can\u2019t exist computers with the address 192.168.1.0.",
@@ -6268,7 +6268,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf650"
+        "id": 650
     },
     {
         "question": "The network board acts as a physical interface between the computer and the network cable.",
@@ -6277,7 +6277,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf651"
+        "id": 651
     },
     {
         "question": "LAN is a global network.",
@@ -6286,7 +6286,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf652"
+        "id": 652
     },
     {
         "question": "LAN is not a global network.",
@@ -6295,7 +6295,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf653"
+        "id": 653
     },
     {
         "question": "Mobile phones can\u2019t connect to the internet without a network board.",
@@ -6304,7 +6304,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf654"
+        "id": 654
     },
     {
         "question": "The logical AND between the mask and IP address has as result the broadcast address.",
@@ -6313,7 +6313,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf655"
+        "id": 655
     },
     {
         "question": "The IP address can\u2019t be determined using the network address and the netmask.",
@@ -6322,7 +6322,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf656"
+        "id": 656
     },
     {
         "question": "UDP waits for the confirmation that the packets were received.",
@@ -6331,7 +6331,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf657"
+        "id": 657
     },
     {
         "question": "UDP is safer than TCP.",
@@ -6340,7 +6340,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf658"
+        "id": 658
     },
     {
         "question": "The routers use the IP addresses to transfer frames to other networks.",
@@ -6349,7 +6349,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf659"
+        "id": 659
     },
     {
         "question": "A wireless access point has a limited area coverage.",
@@ -6358,7 +6358,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf660"
+        "id": 660
     },
     {
         "question": "More websites can be hosted on the same web server.",
@@ -6367,7 +6367,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf661"
+        "id": 661
     },
     {
         "question": "An IP address is a binary number on 32 bits.",
@@ -6376,7 +6376,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf662"
+        "id": 662
     },
     {
         "question": "A router connects to a computer with a Straight-through cable.",
@@ -6385,7 +6385,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf663"
+        "id": 663
     },
     {
         "question": "TCP waits for the confirmation that the packets were received.",
@@ -6394,7 +6394,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf664"
+        "id": 664
     },
     {
         "question": "An IP address is a unique identifier for every computer in an IP network.",
@@ -6403,7 +6403,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf665"
+        "id": 665
     },
     {
         "question": "The network board doesn\u2019t transfer data to other computers.",
@@ -6412,7 +6412,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf666"
+        "id": 666
     },
     {
         "question": "A UDP socket is created with the parameters AF_INET and SOCK_DGRAM.",
@@ -6421,7 +6421,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf667"
+        "id": 667
     },
     {
         "question": "An IP address is a common identifier for more computers in an IP network.",
@@ -6430,7 +6430,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf668"
+        "id": 668
     },
     {
         "question": "The IP address can be determined with the network address and the netmask.",
@@ -6439,7 +6439,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf669"
+        "id": 669
     },
     {
         "question": "There can be more computers with the address 192.168.1.1 in a LAN.",
@@ -6448,7 +6448,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf670"
+        "id": 670
     },
     {
         "question": "A TCP is created with the parameters AF_INET and SOCK_DGRAM.",
@@ -6457,7 +6457,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf671"
+        "id": 671
     },
     {
         "question": "The DNS service runs on the TCP port 53.",
@@ -6466,7 +6466,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf672"
+        "id": 672
     },
     {
         "question": "The DNS service runs on the UDP port 53.",
@@ -6475,7 +6475,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf673"
+        "id": 673
     },
     {
         "question": "A UDP socket is created with the parameters AF_INET and SOCK_STREAM.",
@@ -6484,7 +6484,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf674"
+        "id": 674
     },
     {
         "question": "A TCP socket is created with the parameters AF_INET and SOCK_STREAM.",
@@ -6493,7 +6493,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf675"
+        "id": 675
     },
     {
         "question": "HTTPS transfers encrypted data.",
@@ -6502,7 +6502,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf676"
+        "id": 676
     },
     {
         "question": "HTTP transfers encrypted data.",
@@ -6511,7 +6511,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf677"
+        "id": 677
     },
     {
         "question": "LAN is a global network.",
@@ -6520,7 +6520,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf678"
+        "id": 678
     },
     {
         "question": "LAN is not a global network.",
@@ -6529,7 +6529,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf679"
+        "id": 679
     },
     {
         "question": "A network board can have only one IP address.",
@@ -6538,7 +6538,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf680"
+        "id": 680
     },
     {
         "question": "A network board can have more IP addresses.",
@@ -6547,7 +6547,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf681"
+        "id": 681
     },
     {
         "question": "The address 87.35.15.63/26 can be a broadcast address.",
@@ -6556,7 +6556,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf682"
+        "id": 682
     },
     {
         "question": "The broadcast address can be computed using the network address and the netmask.",
@@ -6565,7 +6565,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf683"
+        "id": 683
     },
     {
         "question": "The broadcast address can be computed using the IP address and the netmask.",
@@ -6574,7 +6574,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf684"
+        "id": 684
     },
     {
         "question": "The address 83.35.15.8/28 can be a broadcast address.",
@@ -6583,7 +6583,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf685"
+        "id": 685
     },
     {
         "question": "The address 127.0.0.1 can\u2019t be a broadcast address.",
@@ -6592,7 +6592,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf686"
+        "id": 686
     },
     {
         "question": "The broadcast address can\u2019t be computed using the network address and the netmask.",
@@ -6601,7 +6601,7 @@
             "false"
         ],
         "correct": "b",
-        "id": "tf687"
+        "id": 687
     },
     {
         "question": "The address 87.35.15.7/29 can be a broadcast address.",
@@ -6610,7 +6610,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf688"
+        "id": 688
     },
     {
         "question": "The broadcast address for the station with the IP address 192.120.0.1/16 is 192.120.255.255.",
@@ -6619,7 +6619,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf689"
+        "id": 689
     },
     {
         "question": "The network board can be external.",
@@ -6628,7 +6628,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf690"
+        "id": 690
     },
     {
         "question": "The BUS topology consists of a single cable which connects in series all the computers from the network.",
@@ -6637,7 +6637,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf691"
+        "id": 691
     },
     {
         "question": "Choose the true statements:",
@@ -6648,7 +6648,7 @@
             "TCP reads bytes from a packet"
         ],
         "correct": "abc",
-        "id": "mcm692"
+        "id": 692
     },
     {
         "question": "Two computers from the Internet can have the same IP address if they use private IP addresses.",
@@ -6657,7 +6657,7 @@
             "false"
         ],
         "correct": "a",
-        "id": "tf693"
+        "id": 693
     },
     {
         "question": "Broadcasting is:",
@@ -6668,6 +6668,6 @@
             "When a transmitted packet is received and processed by every machine on the network"
         ],
         "correct": "d",
-        "id": "mcs694"
+        "id": 694
     }
 ]

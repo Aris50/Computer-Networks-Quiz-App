@@ -7,6 +7,30 @@ class Controller:
     def get_data(self):
         return self.__repo.get_data()
 
+    def get_tf_questions(self):
+        return self.__repo.get_tf_questions()
+
+    def get_mcs_questions(self):
+        return self.__repo.get_mcs_questions()
+
+    def get_mcm_questions(self):
+        return self.__repo.get_mcm_questions()
+
+    def get_fr_questions(self):
+        return self.__repo.get_fr_questions()
+
+    def get_tf_questions_ids(self):
+        return list(self.__repo.get_tf_questions_ids())
+
+    def get_mcs_questions_ids(self):
+        return list(self.__repo.get_mcs_questions_ids())
+
+    def get_mcm_questions_ids(self):
+        return list(self.__repo.get_mcm_questions_ids())
+
+    def get_fr_questions_ids(self):
+        return list(self.__repo.get_fr_questions_ids())
+
     def set_data(self, new_data):
         self.__repo.set_data(new_data)
 

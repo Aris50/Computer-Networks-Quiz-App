@@ -3,6 +3,12 @@ import random
 import time
 import threading
 
+'''
+   fr -> free response
+   tf -> true/false
+   mcm -> multiple choice, multiple answers
+   mcs -> multiple choice, single answer
+'''
 # TODO: handle user input errors
 class Bcolors:
     CORRECT = '\033[92m'
@@ -18,11 +24,27 @@ class View:
         self.__remaining_time = 0
         self.__lock = threading.Lock()
 
+
     #Prints all the questions on the screen
     def print_all_questions(self):
         questions = list(self.__controller.get_data().values())
         for i in range(len(questions)):
             print(f"{i+1}: {questions[i]}")
+
+    @staticmethod
+    def print_menu():
+        print("\n\n" + Bcolors.BLUE+"MAIN MENU"+Bcolors.NORMAL)
+        print("1. Start quick quiz")
+        print("2. Start practice")
+        print("0. Exit")
+
+    @staticmethod
+    def get_menu_choice():
+        choice = input(">>")
+        while choice not in ["0", "1", "2"]:
+            print(Bcolors.INCORRECT + "Invalid input. Please enter a valid option" + Bcolors.NORMAL)
+            choice = input(">>")
+        return choice
 
     @staticmethod
     def ask_user_to_play_again():
@@ -36,10 +58,21 @@ class View:
                     time.sleep(1)
                 return True
             elif answer == "n":
-                print("Bye!")
+                print("Exiting to main menu...")
+                for i in range(3):
+                    print("...")
+                    time.sleep(1)
                 return False
             else:
                 print(Bcolors.INCORRECT + "Invalid input. Please enter y or n." + Bcolors.NORMAL)
+
+    def print_number_of_available_questions(self):
+        print("\n\n" + Bcolors.BLUE + "AVAILABLE QUESTIONS IN THE ARCHIVE" + Bcolors.NORMAL)
+        print("1. True/False questions: " + str(len(self.__controller.get_tf_questions())))
+        print("2. Multiple choice, single answer questions: " + str(len(self.__controller.get_mcs_questions())))
+        print("3. Multiple choice, multiple answers questions: " + str(len(self.__controller.get_mcm_questions())))
+        print("4. Free response questions: " + str(len(self.__controller.get_fr_questions())))
+        print("5. All questions: " + str(len(self.__controller.get_data())) + "\n")
 
     def countdown(self):
         while self.__remaining_time > 0:
@@ -69,12 +102,66 @@ class View:
             elif ans != "n":
                 print(Bcolors.INCORRECT+"Invalid input. Please enter y or n."+Bcolors.NORMAL)
 
+    def get_desired_number_from_user(self):
+        number = input("How many questions do you want to answer?(write all if you want to answer all questions): ")
+        # Prepare the number of questions. Make sure the input is a valid number
+        if number != "all":
+            while not number.isdigit() or int(number) <= 0:
+                print(Bcolors.INCORRECT + "Please enter a valid number" + Bcolors.NORMAL)
+                number = input(
+                    "How many questions do you want to answer?(write all if you want to answer all questions): ")
+            number = int(number)
+        else:
+            number = self.__controller.get_number_of_questions()
+        return number
+
+    def show_final_score(self, number):
+        print("\n\n-----------------------------------")
+        print("Your final score is " + Bcolors.BLUE + str(
+            self.__controller.calculate_grade(number)) + "%" + Bcolors.NORMAL)
+        print("-----------------------------------\nThank you for playing!\n")
+
     # Prints the welcome message that the user sees on the console when they first open the app
     @staticmethod
-    def print_welcome_message():
+    def print_welcome_message_1():
         # self.print_all_questions()
-        rules = "Welcome to the Computer Networks Quiz!\n\n>> You will be asked a series of multiple choice question, and you must answer them correctly. \n>> Write in lowercase all the corresponding letters of the answers you think are correct\n>> "+Bcolors.BLUE+"You WILL get points for partially correct results!\n"+Bcolors.NORMAL
+        rules = "Welcome to the Computer Networks Quiz!\n\n>> You will be asked a series of multiple choice question, and you must answer them correctly. \n>> Write in lowercase all the corresponding letters of the answers you think are correct\n>> "+Bcolors.CORRECT+"You WILL get points for partially correct results!\n"+ Bcolors.NORMAL + ">> " +Bcolors.INCORRECT+"YOU WILL BE TIMED! (1 minute/question). When the time runs out the test is over.\n"+Bcolors.NORMAL
         print(rules)
+
+    @staticmethod
+    def print_welcome_message_2():
+        rules = "Welcome to practice!\n\n>> You enter the type of question you want to answer, and you will get a score.\n>> You will NOT be timed!\n>> Available types (please select a number to continue): \n1) true/false\n2) multiple choice with one answer correct\n3) multiple choice with two answers correct\n4) free-choice answer questions\n"
+        print(rules)
+
+    #Let the user select the desired type of questions he wants to practice on
+    def get_appropriate_questions(self):
+        questions = {}
+        valid_id_list = []
+
+        q_type = input("Choose the number of the type of questions you want to practice: ")
+        while (not q_type.isdigit()) or (q_type.isdigit() not in range(1, 4)):
+            print(Bcolors.INCORRECT + "Unable to identify type. Please try again." + Bcolors.NORMAL)
+            q_type = input("Choose the number of the type of questions you want to practice: ")
+        print(Bcolors.CORRECT)
+        if q_type == "1":
+            print("Successfully selected true/false questions.")
+            questions = self.__controller.get_tf_questions()
+            valid_id_list = self.__controller.get_tf_questions_ids()
+        elif q_type == "2":
+            print("Successfully selected multiple choice questions with one correct answer.")
+            questions = self.__controller.get_mcs_questions()
+            valid_id_list = self.__controller.get_mcs_questions_ids()
+        elif q_type == "3":
+            print("Successfully selected multiple choice questions with two correct answers.")
+            questions = self.__controller.get_mcm_questions()
+            valid_id_list = self.__controller.get_mcm_questions_ids()
+        elif q_type == "4":
+            print("Successfully selected free response questions.")
+            questions = self.__controller.get_fr_questions()
+            valid_id_list = self.__controller.get_fr_questions_ids()
+        print(Bcolors.NORMAL)
+        return questions, valid_id_list
+
 
     def answer_question_view(self,current_question, i, number):
         # Print the question
@@ -114,77 +201,110 @@ class View:
 
     #This is the main function that runs the app
     def run(self):
-        self.print_welcome_message()
-
         # Initialise all the available questions
-        questions = self.__controller.get_data()
+        self.print_number_of_available_questions()
 
-        # Start the main application
         while True:
-            # Ask the user how many questions they want to answer
-            number = input("How many questions do you want to answer?(write all if you want to answer all questions): ")
+            # Print the menu and let the user choose:
+            View.print_menu()
+            choice = View.get_menu_choice()
 
-            # Prepare the number of questions. Make sure the input is a valid number
-            if number != "all":
-                while not number.isdigit() or int(number) <= 0:
-                    print(Bcolors.INCORRECT+"Please enter a valid number"+Bcolors.NORMAL)
-                    number = input("How many questions do you want to answer?(write all if you want to answer all questions): ")
-                number = int(number)
-            else:
-                number = self.__controller.get_number_of_questions()
+            # 1st choice: Start a random quiz
+            if choice == "1":
+                questions = self.__controller.get_data()
+                self.print_welcome_message_1()
+                while True:
+                    # Ask the user how many questions they want to answer
+                    number = self.get_desired_number_from_user()
 
-            # Set the timer and start the countdown
-            self.__remaining_time  = number*60
-            self.start_countdown()
+                    # Set the timer and start the countdown
+                    self.__remaining_time  = number*60
+                    self.start_countdown()
 
-            # We keep in valid_id_list al the ids of the questions that were not asked yet
-            valid_id_list = self.__controller.get_all_ids()
-
-            # We start using the questions one by one, until the user answers the desired number of questions
-            for i in range(number):
-                # Get a random question id and remove it from the valid id's, using random
-                question_id = random.choice(valid_id_list)
-                valid_id_list.remove(question_id)
-
-                # Let the user answer the question
-                current_question = questions[question_id]
-                self.answer_question_view(current_question, i, number)
-
-                # If we are not at the last question, we print the score, as usual.
-                # If we are, we print the average because the game is over, and we proceed to give the user his grade
-                if i != number-1 and self.__remaining_time:
-                    print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
-                else:
-                    print("\n\n-----------------------------------")
-                    if self.__remaining_time==0:
-                        print("TIME IS UP!")
-                    print("Your final score is " + Bcolors.BLUE + str(
-                        self.__controller.calculate_grade(number)) + "%"+ Bcolors.NORMAL)
-                    print("-----------------------------------\n")
-                    print(f"You had: {int(self.__remaining_time/60)} minutes and {self.__remaining_time%60} seconds left.")
-                    print(Bcolors.CORRECT+"Thank you for playing!"+Bcolors.NORMAL)
-                    # We make sure we reset the program here
-                    break
-
-                # If we have get to an empty list and the for loop is still going:
-                # it means that all the questions were asked exactly once, and the number of questions that the user entered is not yet finished.
-                # In this case, we restart and add all the id's again
-                if not valid_id_list:
+                    # We keep in valid_id_list al the ids of the questions that were not asked yet
                     valid_id_list = self.__controller.get_all_ids()
 
-                # Print how much time the user has left.
-                self.print_time_left()
+                    # We start using the questions one by one, until the user answers the desired number of questions
+                    for i in range(number):
+                        # Get a random question id and remove it from the valid id's, using random
+                        question_id = random.choice(valid_id_list)
+                        valid_id_list.remove(question_id)
+
+                        # Let the user answer the question
+                        current_question = questions[question_id]
+                        self.answer_question_view(current_question, i, number)
+
+                        # If we are not at the last question, we print the score, as usual.
+                        # If we are, we print the average because the game is over, and we proceed to give the user his grade
+                        if i != number-1 and self.__remaining_time:
+                            print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
+                        else:
+                            if self.__remaining_time==0:
+                                print("TIME IS UP!")
+                            self.show_final_score(number)
+                            print(f"You had: {int(self.__remaining_time/60)} minutes and {self.__remaining_time%60} seconds left.")
+                            print(Bcolors.CORRECT+"Thank you for playing!"+Bcolors.NORMAL)
+                            # We make sure we reset the program here
+                            break
+
+                        # If we have get to an empty list and the for loop is still going:
+                        # it means that all the questions were asked exactly once, and the number of questions that the user entered is not yet finished.
+                        # In this case, we restart and add all the id's again
+                        if not valid_id_list:
+                            valid_id_list = self.__controller.get_all_ids()
+
+                        # Print how much time the user has left.
+                        self.print_time_left()
 
 
-            # Allow the user to review his mistakes if he so desires
-            self.revision()
+                    # Allow the user to review his mistakes if he so desires
+                    self.revision()
 
-            # Ask the user if they want to play again, if they do we need to reset the score
-            if not self.ask_user_to_play_again():
-                self.__remaining_time=0
+                    # Ask the user if they want to play again, if they do we need to reset the score
+                    if not self.ask_user_to_play_again():
+                        self.__remaining_time=0
+                        break
+                    else:
+                        self.__controller.reset_score()
+            elif choice == "2":
+                # We print the welcome message for the practice mode
+                View.print_welcome_message_2()
+
+                # We get our required data to start the practice
+                questions, valid_id_list = self.get_appropriate_questions()
+                while True:
+                    # We get the total number of questions from a certain type
+                    number = len(valid_id_list)
+                    # We start answering all of them
+                    for i in range (number):
+                        question_id = random.choice(valid_id_list)
+                        valid_id_list.remove(question_id)
+                        current_question = questions[question_id]
+                        self.answer_question_view(current_question, i, number)
+                        if i != number-1:
+                            print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
+                        else:
+                            self.show_final_score(number)
+
+                    # After we finish, we display revision, and ask user if he wants to replay
+                    self.revision()
+                    if not self.ask_user_to_play_again():
+                        self.__remaining_time=0
+                        break
+                    else:
+                        self.__controller.reset_score()
+
+
+
+
+
+
+            elif choice == "0":
+                print(Bcolors.CORRECT+"Thanks for stopping by!"+Bcolors.NORMAL)
+                print("Exiting the program...")
+                time.sleep(3)
+                #exit(0)
                 break
-            else:
-                self.__controller.reset_score()
 
 
 
