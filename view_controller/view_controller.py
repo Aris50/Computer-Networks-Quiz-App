@@ -290,13 +290,17 @@ class View:
                     # Allow the user to review his mistakes if he so desires
                     self.revision()
 
-                    # Ask the user if they want to play again, if they do we need to reset the score
+                    # As the game is over we reset the score and also the wrong questions
+                    self.__controller.reset_score()
+                    self.__controller.reset_wrong_questions()
+
+                    # The test was timed so we also need to reset the score
+                    self.__remaining_time = 0
+
+                    # Ask the user if they want to play again, if they dont we exit to main menu
                     if not self.ask_user_to_play_again():
-                        self.__remaining_time=0
                         break
-                    else:
-                        self.__controller.reset_score()
-                        self.__controller.reset_wrong_questions()
+
             elif choice == "2":
                 # We print the welcome message for the practice mode
                 View.print_welcome_message_2()
@@ -314,15 +318,18 @@ class View:
 
                         # We answer the question, and we print the score at the end of each answer
                         self.answer_question_view(current_question, i, number)
-                        self.print_score_status(i, number)
+                        self.print_score_status(number, i)
 
                     # After we finish, we display revision, and ask user if he wants to replay
                     self.revision()
+
+                    # As the game is over, we need the score reset and the wrong questions for revision also
+                    self.__controller.reset_score()
+                    self.__controller.reset_wrong_questions()
+
                     if not self.ask_user_to_play_again():
                         break
-                    else:
-                        self.__controller.reset_score()
-                        self.__controller.reset_wrong_questions()
+
             elif choice == "3":
                 # We get the questions we need, this time we do not need the list of id's
                 questions = self.__controller.gather_troubling_question_from_question_status()
@@ -338,17 +345,20 @@ class View:
                 number = len(questions)
                 index = -1
                 while True:
-                    index += 1
                     for question in questions:
+                        index += 1
                         self.answer_question_view(question, index, number)
-                        self.print_score_status(index,number)
+                        self.print_score_status(number, index)
 
+                    # Give user the capacity to revise his score
                     self.revision()
+
+                    # As the game is over, we need the score reset and the wrong questions for revision also
+                    self.__controller.reset_score()
+                    self.__controller.reset_wrong_questions()
+
                     if not self.ask_user_to_play_again():
                         break
-                    else:
-                        self.__controller.reset_score()
-                        self.__controller.reset_wrong_questions()
 
 
             elif choice == "0":
