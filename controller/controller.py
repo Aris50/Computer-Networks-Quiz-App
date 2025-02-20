@@ -43,6 +43,24 @@ class Controller:
     def reset_wrong_questions(self):
         self.__repo.reset_wrong_questions()
 
+    # Here we work with two dictionaries: The one with all the questions and the one with the question status
+    def gather_troubling_question_from_question_status(self):
+        troubling_questions = []
+        for question_id in self.__repo.get_keys():
+            question_status = self.__repo.get_answer_status(question_id)
+            if question_status['answered_wrong'] > 0:
+                troubling_questions.append(question_status)
+
+        # Sort based on the number of times the question was answered wrong
+        troubling_questions = sorted(troubling_questions, key=lambda q: q['answered_wrong'], reverse=True)
+
+        # Get the actual questions, not their status
+        troubling_questions = [self.__repo.get_question(question['id']) for question in troubling_questions]
+
+        # Return the result
+        return troubling_questions
+
+
     def get_all_ids(self):
         # Return a list with all the id's of all the question
         every_id = list(self.__repo.get_keys())
@@ -69,8 +87,6 @@ class Controller:
     def add_wrong_question(self, question):
         self.__repo.add_wrong_question(question)
 
-    def reset_wrong_questions(self):
-        self.__repo.reset_wrong_questions()
 
     def get_wrong_questions(self):
         return self.__repo.get_wrong_questions()

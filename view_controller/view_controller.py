@@ -26,22 +26,28 @@ class View:
 
 
     #Prints all the questions on the screen
-    def print_all_questions(self):
-        questions = list(self.__controller.get_data().values())
+    @staticmethod
+    def print_all_questions(questions):
         for i in range(len(questions)):
-            print(f"{i+1}: {questions[i]}")
+            print(f"{i+1}: {questions[i]['question']}")
+            for j in range(len(questions[i]['answers'])):
+                print(f"{chr(j + 97)}) {questions[i]['answers'][j]}")
+            #print(f"Correct answer: {questions[i]['correct']}")
+        print("\n")
 
     @staticmethod
     def print_menu():
         print("\n\n" + Bcolors.BLUE+"MAIN MENU"+Bcolors.NORMAL)
         print("1. Start quick quiz")
         print("2. Start practice")
+        print("3. Solve questions you struggle with")
+        #print("4. Print questions")
         print("0. Exit")
 
     @staticmethod
     def get_menu_choice():
         choice = input(">>")
-        while choice not in ["0", "1", "2"]:
+        while choice not in ["0", "1", "2", "3"]:
             print(Bcolors.INCORRECT + "Invalid input. Please enter a valid option" + Bcolors.NORMAL)
             choice = input(">>")
         return choice
@@ -66,13 +72,21 @@ class View:
             else:
                 print(Bcolors.INCORRECT + "Invalid input. Please enter y or n." + Bcolors.NORMAL)
 
+    def print_score_status(self,number, index):
+        if index != number - 1:
+            print("Your current score is " + Bcolors.BLUE + str(
+                self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
+        else:
+            self.show_final_score(number)
+
     def print_number_of_available_questions(self):
         print("\n\n" + Bcolors.BLUE + "AVAILABLE QUESTIONS IN THE ARCHIVE" + Bcolors.NORMAL)
         print("1. True/False questions: " + str(len(self.__controller.get_tf_questions())))
         print("2. Multiple choice, single answer questions: " + str(len(self.__controller.get_mcs_questions())))
         print("3. Multiple choice, multiple answers questions: " + str(len(self.__controller.get_mcm_questions())))
         print("4. Free response questions: " + str(len(self.__controller.get_fr_questions())))
-        print("5. All questions: " + str(len(self.__controller.get_data())) + "\n")
+        print("5. All questions: " + str(len(self.__controller.get_data())))
+        print("6. Question you got wrong at least once: " + str(len(self.__controller.gather_troubling_question_from_question_status())) + "\n")
 
     def countdown(self):
         while self.__remaining_time > 0:
@@ -134,6 +148,11 @@ class View:
     @staticmethod
     def print_welcome_message_2():
         rules = "Welcome to practice!\n\n>> You enter the type of question you want to answer, and you will get a score.\n>> You will NOT be timed!\n>> Available types (please select a number to continue): \n1) true/false\n2) multiple choice with one answer correct\n3) multiple choice with two answers correct\n4) free-choice answer questions\n"
+        print(rules)
+
+    @staticmethod
+    def print_welcome_message_3():
+        rules="Welcome to the wrong question section! Here you can do the questions you got wrong!\n Above are printed all the questions you got wrong at least once .You will be asked in the order of how many times you got them wrong!.\n"
         print(rules)
 
     #Let the user select the desired type of questions he wants to practice on
@@ -251,9 +270,9 @@ class View:
                         if i != number-1 and self.__remaining_time:
                             print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
                         else:
+                            self.show_final_score(number)
                             if self.__remaining_time==0:
                                 print("TIME IS UP!")
-                            self.show_final_score(number)
                             print(f"You had: {int(self.__remaining_time/60)} minutes and {self.__remaining_time%60} seconds left.")
                             # We make sure we reset the program here
                             break
@@ -292,16 +311,40 @@ class View:
                         question_id = random.choice(valid_id_list)
                         valid_id_list.remove(question_id)
                         current_question = questions[question_id]
+
+                        # We answer the question, and we print the score at the end of each answer
                         self.answer_question_view(current_question, i, number)
-                        if i != number-1:
-                            print("Your current score is " + Bcolors.BLUE + str(self.__controller.get_score()) + "/" + str(number) + Bcolors.NORMAL)
-                        else:
-                            self.show_final_score(number)
+                        self.print_score_status(i, number)
 
                     # After we finish, we display revision, and ask user if he wants to replay
                     self.revision()
                     if not self.ask_user_to_play_again():
-                        self.__remaining_time=0
+                        break
+                    else:
+                        self.__controller.reset_score()
+                        self.__controller.reset_wrong_questions()
+            elif choice == "3":
+                # We get the questions we need, this time we do not need the list of id's
+                questions = self.__controller.gather_troubling_question_from_question_status()
+
+                # We print the questions
+                View.print_all_questions(questions)
+
+                # We print the welcome message including the rules
+                View.print_welcome_message_3()
+
+                # We get the number of questions we need.
+                # We set the index so that we can keep track of the number of questions we have answered, because this time we do not use a for loop
+                number = len(questions)
+                index = -1
+                while True:
+                    index += 1
+                    for question in questions:
+                        self.answer_question_view(question, index, number)
+                        self.print_score_status(index,number)
+
+                    self.revision()
+                    if not self.ask_user_to_play_again():
                         break
                     else:
                         self.__controller.reset_score()

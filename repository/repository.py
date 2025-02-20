@@ -40,6 +40,15 @@ class Repository:
     def get_data(self):
         return self.__data.copy()
 
+    def get_question(self, question_id):
+        return self.__data[question_id]
+
+    def get_question_status_data(self):
+        return self.__question_status.copy()
+
+    def get_question_status_keys(self):
+        return self.__question_status.keys()
+
     def get_tf_questions(self):
         return self.__tf_questions.copy()
 
@@ -116,9 +125,6 @@ class Repository:
 
     def add_wrong_question(self, question):
         self.__wrong_questions[question['id']] = question
-
-    def reset_wrong_questions(self):
-        self.__wrong_questions = {}
 
     def get_wrong_questions(self):
         return self.__wrong_questions.copy()
