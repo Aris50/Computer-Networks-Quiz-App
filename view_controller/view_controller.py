@@ -323,9 +323,10 @@ class View:
                 # We print the welcome message for the practice mode
                 View.print_welcome_message_2()
 
-                # We get our required data to start the practice
-                questions, valid_id_list = self.get_appropriate_questions()
                 while True:
+                    # We get our required data to start the practice
+                    questions, valid_id_list = self.get_appropriate_questions()
+
                     # We get the total number of questions from a certain type
                     number = len(valid_id_list)
                     # We start answering all of them
@@ -351,20 +352,21 @@ class View:
                         break
 
             elif choice == "3":
-                # We get the questions we need, this time we do not need the list of id's
+                # We get the questions that the user got wrong at least once
                 questions = self.__controller.gather_troubling_question_from_question_status()
-
                 # We print the questions
                 View.print_all_questions(questions)
-
                 # We print the welcome message including the rules
                 View.print_welcome_message_3()
 
                 # We get the number of questions we need.
-                # We set the index so that we can keep track of the number of questions we have answered, because this time we do not use a for loop
                 number = len(questions)
+                # We set the index so that we can keep track of the number of questions we have answered, because this time we do not use a for loop
                 index = -1
                 while True:
+                    # We get the questions we need, in the while loop too so if the user restarts, we also get all the questions back
+                    questions = self.__controller.gather_troubling_question_from_question_status()
+
                     for question in questions:
                         # We manually increase the index of questions
                         index += 1
