@@ -107,7 +107,7 @@ class View:
         ans="n/a"
         # Handle correctly wrong input
         while ans not in ["y", "n"]:
-            ans = input("Do you want to revise your wrong answers? (y/n): ")
+            ans = input("Do you want to revise your wrong answers? (y/n): \n>>")
             if ans == "y":
                 for key,value in wrong_questions.items():
                     print("\n" + f"{value['label_nr']}" +". "+f"{value['question']}")
@@ -142,17 +142,17 @@ class View:
     @staticmethod
     def print_welcome_message_1():
         # self.print_all_questions()
-        rules = "Welcome to the Computer Networks Quiz!\n\n>> You will be asked a series of multiple choice question, and you must answer them correctly. \n>> Write in lowercase all the corresponding letters of the answers you think are correct\n>> "+Bcolors.CORRECT+"You WILL get points for partially correct results!\n"+ Bcolors.NORMAL + ">> " +Bcolors.INCORRECT+"YOU WILL BE TIMED! (1 minute/question). When the time runs out the test is over.\n"+Bcolors.NORMAL
+        rules = "Welcome to the Computer Networks Quiz!\n\n>> You will be asked a series of multiple choice question, and you must answer them correctly. \n>> Write in lowercase all the corresponding letters of the answers you think are correct\n>> "+Bcolors.CORRECT+"You WILL get points for partially correct results!\n"+ Bcolors.NORMAL + ">> " +Bcolors.INCORRECT+"YOU WILL BE TIMED! (1 minute/question). When the time runs out the test is over.\n"+Bcolors.NORMAL+ ">> Do not forget you can say the exit keyword during a question in order to terminate a certain exercise.\n"
         print(rules)
 
     @staticmethod
     def print_welcome_message_2():
-        rules = "Welcome to practice!\n\n>> You enter the type of question you want to answer, and you will get a score.\n>> You will NOT be timed!\n>> Available types (please select a number to continue): \n1) true/false\n2) multiple choice with one answer correct\n3) multiple choice with two answers correct\n4) free-choice answer questions\n"
+        rules = "Welcome to practice!\n\n>> You enter the type of question you want to answer, and you will get a score.\n>> You will NOT be timed!\n>> Available types (please select a number to continue): \n1) true/false\n2) multiple choice with one answer correct\n3) multiple choice with two answers correct\n4) free-choice answer questions\n"+">>Do not forget you can say the exit keyword during a question in order to terminate a certain exercise.\n"
         print(rules)
 
     @staticmethod
     def print_welcome_message_3():
-        rules="Welcome to the wrong question section! Here you can do the questions you got wrong!\n Above are printed all the questions you got wrong at least once .You will be asked in the order of how many times you got them wrong!.\n"
+        rules="Welcome to the wrong question section! Here you can do the questions you got wrong!\n Above are printed all the questions you got wrong at least once .You will be asked in the order of how many times you got them wrong!.\n"+">>Do not forget you can say the exit keyword during a question in order to terminate a certain exercise.\n"
         print(rules)
 
     #Let the user select the desired type of questions he wants to practice on
@@ -201,6 +201,19 @@ class View:
 
         # Get user input
         user_answer = input(">> ")
+        if user_answer =="exit":
+            user_answer=input(Bcolors.INCORRECT+"Are you sure? (y/n): \n>>"+Bcolors.NORMAL)
+            if user_answer=="y":
+                print(Bcolors.INCORRECT+"----------------------------TERMINATED--------------------------------\n"+Bcolors.NORMAL)
+                return False
+            else:
+                print(Bcolors.CORRECT+"RESUMED\n"+Bcolors.NORMAL)
+
+                # We recall the function to restart the process
+                self.answer_question_view(current_question, i, number)
+
+                # In order to stop the recursion, so the function does not execute twice
+                return True
 
         # Evaluate user answer
         # Case 1: the answer is completely correct
@@ -229,6 +242,8 @@ class View:
             else:
                 print(Bcolors.INCORRECT + "INCORRECT!" + Bcolors.NORMAL)
                 print(f"The correct answer was {current_question['correct']}")
+        # Make sure we return true if the function is completed with success
+        return True
 
     #This is the main function that runs the app
     def run(self):
@@ -263,7 +278,10 @@ class View:
 
                         # Let the user answer the question
                         current_question = questions[question_id]
-                        self.answer_question_view(current_question, i, number)
+
+                        # We check if the user wants to exit or not at every answer check
+                        if not self.answer_question_view(current_question, i, number):
+                            break
 
                         # If we are not at the last question, we print the score, as usual.
                         # If we are, we print the average because the game is over, and we proceed to give the user his grade
@@ -317,7 +335,9 @@ class View:
                         current_question = questions[question_id]
 
                         # We answer the question, and we print the score at the end of each answer
-                        self.answer_question_view(current_question, i, number)
+                        # We check if the user wants to exit or not at every answer check
+                        if not self.answer_question_view(current_question, i, number):
+                            break
                         self.print_score_status(number, i)
 
                     # After we finish, we display revision, and ask user if he wants to replay
@@ -346,8 +366,11 @@ class View:
                 index = -1
                 while True:
                     for question in questions:
+                        # We manually increase the index of questions
                         index += 1
-                        self.answer_question_view(question, index, number)
+                        # We check if the user wants to exit or not at every answer check
+                        if not self.answer_question_view(question, index, number):
+                            break
                         self.print_score_status(number, index)
 
                     # Give user the capacity to revise his score

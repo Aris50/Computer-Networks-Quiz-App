@@ -396,7 +396,7 @@
     },
     {
         "id": "mcs79",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -481,7 +481,7 @@
     },
     {
         "id": "mcs96",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -536,7 +536,7 @@
     },
     {
         "id": "mcs107",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -731,7 +731,7 @@
     },
     {
         "id": "mcs146",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -1197,7 +1197,7 @@
     {
         "id": "mcs239",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 2
     },
     {
         "id": "mcs240",
@@ -1391,7 +1391,7 @@
     },
     {
         "id": "mcs278",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -1682,7 +1682,7 @@
     {
         "id": "tf336",
         "answered_correctly": 1,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "tf337",
@@ -1691,7 +1691,7 @@
     },
     {
         "id": "tf338",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -1747,7 +1747,7 @@
     {
         "id": "tf349",
         "answered_correctly": 1,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "tf350",
@@ -1911,7 +1911,7 @@
     },
     {
         "id": "tf382",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -1956,7 +1956,7 @@
     },
     {
         "id": "tf391",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 1
     },
     {
@@ -2127,12 +2127,12 @@
     {
         "id": "tf425",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "tf426",
-        "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_correctly": 1,
+        "answered_wrong": 1
     },
     {
         "id": "tf427",
@@ -2551,7 +2551,7 @@
     },
     {
         "id": "tf510",
-        "answered_correctly": 3,
+        "answered_correctly": 5,
         "answered_wrong": 3
     },
     {
@@ -2641,7 +2641,7 @@
     },
     {
         "id": "tf528",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -2726,7 +2726,7 @@
     },
     {
         "id": "tf545",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 1
     },
     {
@@ -2841,7 +2841,7 @@
     },
     {
         "id": "tf568",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -2951,7 +2951,7 @@
     },
     {
         "id": "tf590",
-        "answered_correctly": 1,
+        "answered_correctly": 2,
         "answered_wrong": 0
     },
     {
@@ -2971,7 +2971,7 @@
     },
     {
         "id": "tf594",
-        "answered_correctly": 1,
+        "answered_correctly": 2,
         "answered_wrong": 0
     },
     {
@@ -3222,7 +3222,7 @@
     {
         "id": "tf644",
         "answered_correctly": 1,
-        "answered_wrong": 2
+        "answered_wrong": 3
     },
     {
         "id": "tf645",
