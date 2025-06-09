@@ -1,13 +1,17 @@
 import json
+import os
+
 class Repository:
     def __init__(self):
         with open('safety.json', 'r') as file:
             # Get the data from the file
             data = json.load(file)
 
-        with open('question_status.json', 'r') as file:
-            # Get the data from the file
-            questions_status = json.load(file)
+        # Make sure we have id's in all the data json objects
+        for i, question in enumerate(data):
+            if 'id' not in question:
+                question['id'] = str(i)
+
 
         # Create a dictionary with the id of the question as the key, and with the right prefixes:
         # 1) Prefix the questions (because we take them from safety and they don't have prefixes, so we make them)
@@ -18,11 +22,24 @@ class Repository:
         # 2b) Save the prefixing
         self.log_data('questions.json', self.__data)
 
+
         # Create smaller dictionaries with all the separate types of questions
         self.__tf_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:2] == 'tf'}
         self.__mcs_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:3] == 'mcs'}
         self.__mcm_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:3] == 'mcm'}
         self.__fr_questions = {key: self.__data[key] for key in self.__data.keys() if self.__data[key]['id'][:2] == 'fr'}
+        # print("Loaded questions.json with", len(self.__data), "questions")
+
+        if os.path.getsize('question_status.json') == 0:
+            print("question_status.json is empty, creating a new one with all questions and their status set to 0")
+            # If the file is empty, create a new dictionary with all questions and their status
+            questions_status = [{'id': question['id'], 'answered_correctly': 0, 'answered_wrong': 0} for question in data]
+            # Save the new dictionary to the file
+            self.log_data('question_status.json', questions_status)
+        else:
+            with open('question_status.json', 'r') as file:
+                # Get the data from the file
+                questions_status = json.load(file)
 
         # Create a dictionary with the id as a key and the status of the question as the value
         self.__question_status = {question['id']: question for question in questions_status}
@@ -109,7 +126,10 @@ class Repository:
     @staticmethod
     def log_data(file_name, data):
         with open(file_name, 'w') as file:
-            json.dump(list(data.values()), file, indent=4)
+            if isinstance(data, dict):
+                json.dump(list(data.values()), file, indent=4)
+            else:
+                json.dump(data, file, indent=4)
 
     def increment_score(self):
         self.__score+=1
