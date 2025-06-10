@@ -2,7 +2,7 @@
     {
         "id": "mcm0",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm1",
@@ -12,7 +12,7 @@
     {
         "id": "mcm2",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm3",
@@ -27,17 +27,17 @@
     {
         "id": "mcm5",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm6",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm7",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm8",
@@ -47,7 +47,7 @@
     {
         "id": "mcs9",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm10",
@@ -56,23 +56,23 @@
     },
     {
         "id": "mcs11",
-        "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_correctly": 1,
+        "answered_wrong": 1
     },
     {
         "id": "mcm12",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm13",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm14",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcm15",
@@ -87,7 +87,7 @@
     {
         "id": "mcm17",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs18",
@@ -107,7 +107,7 @@
     {
         "id": "mcm21",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs22",
@@ -137,12 +137,12 @@
     {
         "id": "mcm27",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs28",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs29",
@@ -152,12 +152,12 @@
     {
         "id": "mcs30",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs31",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs32",
@@ -177,7 +177,7 @@
     {
         "id": "mcs35",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs36",
@@ -187,7 +187,7 @@
     {
         "id": "mcs37",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs38",
@@ -201,12 +201,12 @@
     },
     {
         "id": "mcs40",
-        "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_correctly": 1,
+        "answered_wrong": 1
     },
     {
         "id": "mcs41",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -217,7 +217,7 @@
     {
         "id": "mcs43",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs44",
@@ -226,23 +226,23 @@
     },
     {
         "id": "mcs45",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
         "id": "mcs46",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs47",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs48",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs49",
@@ -251,18 +251,18 @@
     },
     {
         "id": "mcs50",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
         "id": "mcm51",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs52",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs53",
@@ -276,22 +276,22 @@
     },
     {
         "id": "mcs55",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
         "id": "mcs56",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs57",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
         "id": "mcs58",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -307,7 +307,7 @@
     {
         "id": "mcs61",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs62",
@@ -317,21 +317,21 @@
     {
         "id": "mcs63",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs64",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs65",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 1
     },
     {
         "id": "mcs66",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
@@ -342,7 +342,7 @@
     {
         "id": "mcs68",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 2
     },
     {
         "id": "mcs69",
@@ -366,13 +366,13 @@
     },
     {
         "id": "mcs73",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {
         "id": "mcs74",
         "answered_correctly": 0,
-        "answered_wrong": 0
+        "answered_wrong": 2
     },
     {
         "id": "mcs75",
@@ -381,7 +381,7 @@
     },
     {
         "id": "mcs76",
-        "answered_correctly": 0,
+        "answered_correctly": 1,
         "answered_wrong": 0
     },
     {

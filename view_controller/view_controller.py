@@ -23,6 +23,7 @@ class View:
         self.__controller = Controller()
         self.__remaining_time = 0
         self.__lock = threading.Lock()
+        self.__paused = False
 
 
     #Prints all the questions on the screen
@@ -91,12 +92,29 @@ class View:
     def countdown(self):
         while self.__remaining_time > 0:
             with self.__lock:
+                if self.__paused:
+                    time.sleep(1)  # Wait while paused
+                    continue
                 self.__remaining_time -= 1
             time.sleep(1)
 
     def start_countdown(self):
+        self.__paused = False
         countdown_thread = threading.Thread(target=self.countdown,)
         countdown_thread.start()
+
+    def stop_countdown(self):
+        with self.__lock:
+            self.__paused = True  # Pause the timer
+        print(Bcolors.INCORRECT + "Timer stopped." + Bcolors.NORMAL)
+
+    def resume_countdown(self):
+        with self.__lock:
+            if self.__paused:
+                self.__paused = False  # Resume the timer
+                print(Bcolors.CORRECT + "Timer resumed." + Bcolors.NORMAL)
+            else:
+                print(Bcolors.INCORRECT + "Timer is already running." + Bcolors.NORMAL)
 
     def print_time_left(self):
         print(Bcolors.ORANGE + f"Time left: {(int(self.__remaining_time / 60))} minutes and {self.__remaining_time % 60} seconds" + Bcolors.NORMAL)
@@ -214,6 +232,14 @@ class View:
 
                 # In order to stop the recursion, so the function does not execute twice
                 return True
+
+        if user_answer == "pause":
+            self.stop_countdown()
+            user_answer = input(Bcolors.CORRECT + "Press enter to resume timer: " + Bcolors.NORMAL)
+            self.resume_countdown()
+            self.answer_question_view(current_question, i, number)
+            return True
+
 
         # Evaluate user answer
         # Case 1: the answer is completely correct
